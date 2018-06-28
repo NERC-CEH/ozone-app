@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "env"
+  ],
+
+  "plugins": ["transform-exponentiation-operator", "array-includes"],
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "istanbul",
+          {
+            "exclude": [
+              "src/**/*tests*",
+              "src/**/*_view*",
+              "src/app.js",
+              "dist",
+              "test"
+            ]
+          }
+        ]
+      ]
+    }
+  }
+}
