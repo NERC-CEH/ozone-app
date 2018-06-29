@@ -29,13 +29,13 @@ App configuration is hosted in multiple places. **Note:** config changes should 
 - Get a copy of the code by running:
 
 ```bash
-git clone git://github.com/NERC-CEH/irecord-app.git
+git clone git://github.com/NERC-CEH/ozone-app.git
 ```
 
-- Enter the `irecord-app` directory and install the npm build dependencies:
+- Enter the `ozone-app` directory and install the npm build dependencies:
 
 ```bash
-cd irecord-app
+cd ozone-app
 ```
 ```bash
 npm install

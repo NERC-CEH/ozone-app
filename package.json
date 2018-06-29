@@ -1,11 +1,11 @@
 {
-  "name": "irecord-app",
-  "id": "uk.ac.ceh.ir",
-  "title": "iRecord App",
-  "description": "iRecord mobile application.",
-  "version": "3.1.1",
-  "build": "2",
-  "homepage": "https://irecord.org.uk",
+  "name": "ozone-app",
+  "id": "uk.ac.ceh.oza",
+  "title": "Ozone App",
+  "description": "ICP Vegetation ozone damage mobile application.",
+  "version": "0.1.0",
+  "build": "1",
+  "homepage": "https://icpvegetation.ceh.ac.uk",
   "scripts": {
     "build": "grunt",
     "build:update": "grunt udpate",
