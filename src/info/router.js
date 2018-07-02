@@ -10,8 +10,6 @@ import radio from 'radio';
 import CommonController from '../common/controller';
 import InfoMenuController from './menu/controller';
 import WelcomeController from './welcome/controller';
-import './brc_approved/BRC_approved_logo.png';
-import './brc_approved/styles.scss';
 import './help/swipe_record.png';
 import './credits/sponsor_logo.png';
 
@@ -54,13 +52,6 @@ const Router = Marionette.AppRouter.extend({
         title: 'T&Cs',
         App,
         route: 'info/terms/main',
-      });
-    },
-    'info/brc-approved(/)': () => {
-      CommonController.show({
-        title: 'BRC Approved',
-        App,
-        route: 'info/brc_approved/main',
       });
     },
     'info/credits(/)': () => {

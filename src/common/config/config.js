@@ -4,7 +4,7 @@
 import Indicia from 'indicia';
 
 const HOST =
-  process.env.APP_INDICIA_API_HOST || 'https://www.brc.ac.uk/irecord/';
+  process.env.APP_INDICIA_API_HOST || 'https://www.brc.ac.uk/icpveg';
 
 
 const notInTest = process.env.ENV !== 'test';
@@ -61,7 +61,7 @@ const CONFIG = {
   indicia: {
     host: HOST,
     api_key: process.env.APP_INDICIA_API_KEY,
-    website_id: 23,
+    website_id: 46,
   },
 };
 

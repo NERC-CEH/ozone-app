@@ -3,11 +3,11 @@
     <% if (obj.id) { %>
     <a href="<%= obj.site_url %>/record-details?occurrence_id=<%= obj.id %>"
        class="btn btn-block btn-narrow">
-      <%= t("View on iRecord") %>
+      <%= t("View on the ICP Vegetation website") %>
       <span class="pull-right icon icon-link-ext"></span>
     </a>
     <% } else { %>
-      <%= t("Go to the") %> <a href="<%= obj.site_url %>"><%= t("iRecord website") %></a> <%= t("to edit") %>.</p>
+      <%= t("Go to the") %> <a href="<%= obj.site_url %>"><%= t("ICP Vegetations website") %></a> <%= t("to edit") %>.</p>
     <% } %>
 </div>
 <ul class="table-view core inputs info no-top">

@@ -55,7 +55,7 @@ const MainView = Marionette.View.extend({
     const storeName = Device.isIOS() ? 'App Store' : 'Play Store';
     const steps = {
       initial: {
-        question: 'Enjoying iRecord App?',
+        question: 'Enjoying Ozone App?',
         negativeOption: 'Not really',
         positiveOption: 'Yes!',
       },

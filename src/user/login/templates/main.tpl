@@ -1,5 +1,5 @@
 <div class="info-message">
-  <p><%= t("Please sign in with your iRecord account or register.") %></p>
+  <p><%= t("Please sign in with your ICP Vegetation account or register.") %></p>
 </div>
 <div class="input-group">
   <div class="input-row">

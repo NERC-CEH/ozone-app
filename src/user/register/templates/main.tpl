@@ -23,7 +23,7 @@
 
 
 <div class="table-view-cell input-row">
-  <%= t("I agree to") %> <a href="#info/terms" style="display: inline; color: #91a71c;"><%= t("Terms and Conditions") %></a>
+  <%= t("I agree to the") %> <a href="#info/terms" style="display: inline; color: #91a71c;"><%= t("Terms and Conditions") %></a>
   <div id="user-terms-agree" class="toggle no-yes">
     <div class="toggle-handle"></div>
   </div>

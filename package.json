@@ -126,16 +126,16 @@
     "npm": "^5.4.1"
   },
   "author": {
-    "name": "Karolis Kazlauskis",
-    "email": "karolis@kazlauskis.com",
-    "url": "https://kazlauskis.com"
+    "name": "Jim Bacon",
+    "email": "jame2@ceh.ac.uk",
+    "url": "http://www.brc.ac.uk/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NERC-CEH/irecord-app"
+    "url": "https://github.com/NERC-CEH/ozone-app"
   },
   "bugs": {
-    "url": "https://github.com/NERC-CEH/irecord-app/issues"
+    "url": "https://github.com/NERC-CEH/ozone-app/issues"
   },
   "licenses": [
     {
@@ -144,13 +144,13 @@
     }
   ],
   "keywords": [
-    "irecord",
-    "biological",
+    "ozone",
+    "vegetation",
+    "icp",
     "recording",
     "mobile",
     "app",
     "offline",
-    "ceh",
-    "brc"
+    "ceh"
   ]
 }

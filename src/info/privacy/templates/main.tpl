@@ -7,12 +7,12 @@
     <p>
       If you choose to create a user account for the app, this will be created
       on the
-      <a href="http://irecord.org.uk" rel="external">
-        Biological Record Centre's iRecord system
+      <a href="http://www.brc.ac.uk/icpveg" rel="external">
+        ICP Vegetation website system
       </a>. This enables you to log in and see your records and those submitted
-      by other people for all species. Your name, as specified when you create
+      by other people. Your name, as specified when you create
       the account, will appear next to your records and will be viewable by
-      other users of iRecord.
+      other users.
     </p>
   </li>
   <li>
@@ -26,8 +26,7 @@
       updates and important information about the project. Your email address
       will not be shown and disseminated with your records but will be available
       to the verifying experts if they need to contact you about your sightings.
-      You are able to delete your iRecord account or opt out of receiving emails
-      at any time.
+      You are able to delete your account at any time.
     </p>
   </li>
   <li>
@@ -37,9 +36,8 @@
 
     <p>
       All records submitted will be stored permanently on a secure server at the
-      Biological Record Centre. Records will be made accessible to Local
-      Environmental Record Centres, conservation organisations, scientific
-      researchers, the NBN Gateway and the public.
+      Centre for Ecology &amp; Hydrology. Records will be made accessible to 
+      collaborating scientific researchers and the public.
     </p>
   </li>
   <li>
@@ -49,7 +47,7 @@
 
     <p>
       Your submitted records will be stored permanently and used to inform the
-      conservation and study of the recorded species in the future.
+      study and management of the pollution in the future.
     </p>
   </li>
   <li>

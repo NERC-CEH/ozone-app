@@ -97,12 +97,12 @@ const API = {
 
     const syncStatus = sample.getSyncStatus();
     let body =
-      "This record hasn't been saved to iRecord yet, " +
+      "This record hasn't been saved to the database yet, " +
       'are you sure you want to remove it from your device?';
 
     if (syncStatus === Indicia.SYNCED) {
       body = 'Are you sure you want to remove this record from your device?';
-      body += '</br><i><b>Note:</b> it will remain on the server.</i>';
+      body += '</br><i><b>Note:</b> it will remain in our database.</i>';
     }
     radio.trigger('app:dialog', {
       title: 'Delete',

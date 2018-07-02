@@ -5,26 +5,26 @@
         <div class="message">
           <h2><%= t("Welcome") %></h2>
           <p>
-            <b>iRecord</b> is a platform for management and sharing of your
-            wildlife observations. Learn more by swiping left.
+            <b>The Ozone Injury Recording App</b> is for recording and sharing your
+            observations of ozone damage to plants. Learn more by swiping left.
           </p>
         </div>
       </div>
       <div class="swap second">
         <div class="message">
-          <h2>Record</h2>
+          <h2>Learn</h2>
           <p>
-            Record all the wildlife you see. Over <b>100,000 taxa</b> to choose
-            from.
+            Find out about ozone pollution and damage to plants. Learn what to 
+          look for and see examples.
           </p>
         </div>
       </div>
       <div class="swap third">
         <div class="message">
-          <h2>Accuracy</h2>
+          <h2>Record</h2>
           <p>
-            Benefit from your <b>GPS and rich mapping choices</b>, further
-            automatic <b>data checks</b> and review by experts.
+            Use your GPS and online mapping with photo evidence and review by 
+          experts to contribute to a high quality database.
           </p>
         </div>
       </div>

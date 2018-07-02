@@ -44,17 +44,17 @@
     <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
        href="#c3" aria-expanded="false" aria-controls="c3">
       <span class="icon icon-collapse pull-left"></span>
-      <%= t("Sync. with iRecord") %>
+      <%= t("Sync. with the database") %>
     </a>
     <p id="c3" class="collapse"
        aria-labelledby="headingTwo" aria-expanded="false">
       <%= t("All your saved records will be shown on the home page. By default a record is in") %> <i><%= t("draft") %></i> <%= t("mode until it is set for submission. While it is in") %> <i><%= t("draft") %></i> <%= t("mode the application will not synchronise your record with the database. To set it for sending, open the record and press the") %> <span class="icon icon-send"></span> <%= t("button in the header. The application will try to submit your record once there is a good network connection") %>.
 
       <%= t("If the record has reached the database a red") %> <span class="icon icon-send" style="color: red;"></span>(<%= t("set for submission & saved locally") %>)
-      <%= t("will become green") %> <span class="icon icon-send" style="color: green;"></span> (<%= t("synced to the database") %>). <%= t("Once it has successfully reached the database the record becomes unavailable for new edits. To further edit it please use the") %> <a href="http://irecord.org.uk"><%= t("iRecord Website") %></a>.
+      <%= t("will become green") %> <span class="icon icon-send" style="color: green;"></span> (<%= t("synced to the database") %>). <%= t("Once it has successfully reached the database the record becomes unavailable for new edits. To further edit it please use the") %> <a href="http://www.brc.ac.uk/icpveg"><%= t("ICP Vegetation Website") %></a>.
       <br>
       <br>
-      <b><%= t("Note") %>:</b> <%= t("you have to be signed in to your iRecord account and have a network connection, for the records to be automatically synchronised in the background") %>.
+      <b><%= t("Note") %>:</b> <%= t("you have to be signed in to your ICP Vegetation account and have a network connection, for the records to be automatically synchronised in the background") %>.
       <br>
   </li>
   <li class="table-view-cell">
@@ -119,19 +119,6 @@
       <b><%= t("Note") %>:</b> <%= t("after registering a new account you must verify your email address by clicking on a verification link sent to your email") %>.
     </p>
   </li>
-  <li class="table-view-cell">
-    <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
-       href="#activities-help" aria-expanded="false" aria-controls="activities-help">
-      <span class="icon icon-collapse pull-left"></span>
-      <%= t("Activities") %>
-    </a>
-    <p id="activities-help" class="collapse" aria-labelledby="headingTwo" aria-expanded="false">
-      <%= t("To send records to a specific activity you can select it in the Activities") %>
-      <span class="icon icon-users"></span> <%= t("page") %>.
-      <br><br>
-      <b><%= t("Note") %>:</b> <%= t("only the activities that allow this mobile app records and only the ones that you have joined on the iRecord website will be available to select") %>.
-    </p>
-  </li>
 
   <li class="table-view-divider"><%= t("Other") %></li>
   <li class="table-view-cell">
@@ -158,9 +145,6 @@
        aria-labelledby="headingTwo" aria-expanded="false">
       <%= t("Go to the application settings page") %> <span class="icon icon-settings"></span> <%= t("and click on the Reset") %> <span class="icon icon-undo"></span><%= t("button") %>.
     </p>
-  </li>
-  <li>
-    <%= t("For more help please visit the iRecord") %> <a href="<%= obj.site_url %>/forum/26"><%= t("forum") %></a>.
   </li>
 </ul>
 <br>
