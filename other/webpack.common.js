@@ -61,20 +61,50 @@ module.exports = {
     },
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /^((?!data\.).)*\.js$/,
         exclude: /(node_modules|bower_components|vendor(?!\.js))/,
         loader: 'babel-loader',
       },
-      { test: /\.json/, loader: 'json-loader' },
+      {
+        test: /\.json/, 
+        loader: 'json-loader'
+      },
       {
         test: /(\.png)|(\.svg)|(\.jpg)/,
-        loader: 'file-loader?name=images/[name].[ext]',
+        exclude: [
+          path.resolve(__dirname, '../src/info/photo/images'),
+        ],
+        loader: 'file-loader',
+        options: {
+          name: 'images/[name].[ext]'
+        }
+      },
+      {
+        // Create thumbnails of photo images.
+        // Use a second preset to output original images.
+        // Use include/exclude to prevent chaining with file-loader.
+        include: [
+          path.resolve(__dirname, '../src/info/photo/images'),
+        ],
+        loader: 'sharp-loader',
+        options: {
+          presets: {
+            thumbnail: {
+              name:'images/thumbs/[name].[ext]',
+              width: 50
+            },
+            original: {
+              name:'images/[name].[ext]',
+            }
+          }
+        }
       },
       {
         test: /(\.woff)|(\.ttf)/,
-        loader: 'file-loader?name=font/[name].[ext]',
+        loader: 'file-loader',
+        options: 'name=font/[name].[ext]'
       },
       {
         test: /\.s?css$/,

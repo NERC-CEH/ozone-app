@@ -53,6 +53,8 @@
     "proj4leaflet": "kartena/Proj4Leaflet#0.7.2",
     "ratchet": "github:twbs/ratchet#v2.0.2",
     "raven-js": "3.22.1",
+    "sharp": "^0.20.5",
+    "sharp-loader": "^1.1.0",
     "typeahead.js": "twitter/typeahead.js#v0.11.1"
   },
   "devDependencies": {
