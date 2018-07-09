@@ -1,0 +1,356 @@
+[
+  {
+    "id": "crop",
+    "title": "Crops",
+    "branches": [
+      {
+        "id": "cereal",
+        "title": "Agricultural, cereal",
+        "leaves": [
+          {
+            "title": "Wheat",
+            "subtitle": "<em>Triticum aestivum</em>",
+            "photo": "wheat"
+          },
+          {
+            "title": "Durum wheat",
+            "subtitle": "<em>Triticum durum</em>",
+            "photo": "durum-wheat"
+          },
+          {
+            "title": "Maize",
+            "subtitle": "<em>Zea mays</em>",
+            "photo": "durum-wheat"
+          },
+          {
+            "title": "Rice",
+            "subtitle": "<em>Oryza sativa</em>",
+            "photo": "durum-wheat"
+          },
+          {
+            "title": "Finger millet",
+            "subtitle": "<em>Eleusine coracana</em>",
+            "photo": "finger-millet"
+          },
+          {
+            "title": "Pearl millet",
+            "subtitle": "<em>Pennisetum glaucum</em>",
+            "photo": "pearl-millet"
+          }
+        ]
+      },
+      {
+        "id": "non-cereal",
+        "title": "Agricultural, non-cereal",
+        "leaves": [
+          {
+            "title": "Soybean",
+            "subtitle": "<em>Glycine max</em>",
+            "photo": "soybean"
+          },
+          {
+            "title": "Potato",
+            "subtitle": "<em>Solanum tuberosum</em>",
+            "photo": "potato"
+          },
+          {
+            "title": "Common bean",
+            "subtitle": "<em>Phaseolus vulgaris</em>",
+            "photo": "french-bean"
+          },
+          {
+            "title": "Pinto bean",
+            "subtitle": "<em>Phaseolus vulgaris</em>, cv. Pinto",
+            "photo": "pinto-bean"
+          },
+          {
+            "title": "Black turtle bean",
+            "subtitle": "<em>Phaseolus vulgaris</em>, cv. Black turtle",
+            "photo": "turtle-bean"
+          },
+          {
+            "title": "Mung bean",
+            "subtitle": "<em>Vigna radiata</em>",
+            "photo": "mung-bean"
+          },
+          {
+            "title": "Peas",
+            "subtitle": "<em>Pisum sativum</em>",
+            "photo": "peas"
+          },
+          {
+            "title": "Onion",
+            "subtitle": "<em>Allium cepa</em>",
+            "photo": "onion"
+          }
+        ]
+      },
+      {
+        "id": "fruit-crop",
+        "title": "Fruit crops",
+        "leaves": [
+          {
+            "title": "Tomato",
+            "subtitle": "<em>Lycopersicon esculentum</em>",
+            "photo": "tomato"
+          },
+          {
+            "title": "Grape",
+            "subtitle": "<em>Vitis vinifera</em>",
+            "photo": "grape"
+          },
+          {
+            "title": "Watermelon",
+            "subtitle": "<em>Citrullus lanatus</em>",
+            "photo": "watermelon"
+          },
+          {
+            "title": "Muskmelon",
+            "subtitle": "<em>Cucumis melo</em>",
+            "photo": "muskmelon"
+          },
+          {
+            "title": "Courgette",
+            "subtitle": "<em>Cucurbita pepo</em>",
+            "photo": "courgette"
+          }
+        ]
+      },
+      {
+        "id": "salad",
+        "title": "Leaf salad",
+        "leaves": [
+          {
+            "title": "Lettuce",
+            "subtitle": "<em>Lactuca sativa</em>",
+            "photo": "lettuce"
+          },
+          {
+            "title": "Spinach",
+            "subtitle": "<em>Spinacia oleracea</em>",
+            "photo": "spinach"
+          },
+          {
+            "title": "Chard",
+            "subtitle": "<em>Beta vulgaris</em>",
+            "photo": "chard"
+          },
+          {
+            "title": "Chicory",
+            "subtitle": "<em>Cichorium intybus</em>",
+            "photo": "chicory"
+          }
+        ]
+      },
+      {
+        "id": "herb-crop",
+        "title": "Cooking herbs",
+        "leaves": [
+          {
+            "title": "Parsley",
+            "subtitle": "<em>Petroselinum crispum</em>",
+            "photo": "parsley"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tree",
+    "title": "Trees",
+    "branches":[
+      {
+        "id": "beech",
+        "title": "Beech, birch, ash",
+        "leaves": [
+          {
+            "title": "Birch",
+            "subtitle": "<em>Betula pendula</em>",
+            "photo": "birch"
+          },
+          {
+            "title": "Beech",
+            "subtitle": "<em>Fagus sylvatica</em>",
+            "photo": "beech"
+          },
+          {
+            "title": "Ash",
+            "subtitle": "<em>Fraxinus excelsior</em>",
+            "photo": "ash"
+          },
+          {
+            "title": "Narrow-leaved ash",
+            "subtitle": "<em>Fraxinus angustifolia</em>",
+            "photo": "narrow-leaved-ash"
+          },
+          {
+            "title": "Flowering ash",
+            "subtitle": "<em>Fraxinus ornus</em>",
+            "photo": "flowering-ash"
+          }
+        ]
+      },
+      {
+        "id": "oak",
+        "title": "Oak, poplar, maple",
+        "leaves": [
+          {
+            "title": "Sessile oak",
+            "subtitle": "<em>Quercus petraea</em>",
+            "photo": "sessile-oak"
+          },
+          {
+            "title": "Poplar",
+            "subtitle": "<em>Populus</em> spp",
+            "photo": "poplar"
+          },
+          {
+            "title": "Field maple",
+            "subtitle": "<em>Acer campestre</em>",
+            "photo": "field-maple"
+          },
+          {
+            "title": "Italian maple",
+            "subtitle": "<em>Acer opalus</em>",
+            "photo": "italian-maple"
+          }
+        ]
+      },
+      {
+        "id": "fruit-tree",
+        "title": "Fruit trees",
+        "leaves": [
+          {
+            "title": "While mulberry",
+            "subtitle": "<em>Morus alba</em>",
+            "photo": "white-mulberry"
+          }
+        ]
+      },
+      {
+        "id": "conifer",
+        "title": "Conifers",
+        "leaves": [
+          {
+            "title": "Aleppo pine",
+            "subtitle": "<em>Pinus halepensis</em>",
+            "photo": "aleppo-pine"
+          }
+        ]
+      },
+      {
+        "id": "shrub",
+        "title": "Shrubs",
+        "leaves": [
+          {
+            "title": "Hawthorn",
+            "subtitle": "<em>Crataegus monogyna</em>",
+            "photo": "hawthorn"
+          },
+          {
+            "title": "Honeysuckle",
+            "subtitle": "<em>Lonicera implexa</em>",
+            "photo": "honeysuckle"
+          },
+          {
+            "title": "Wayfaring tree",
+            "subtitle": "<em>Viburnum lantana</em>",
+            "photo": "wayfaring-tree"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grassland",
+    "title": "Grassland",
+    "branches":[
+      {
+        "id": "clover",
+        "title": "Clovers",
+        "leaves": [
+          {
+            "title": "White clover",
+            "subtitle": "<em>Trifolium repens</em>",
+            "photo": "white-clover"
+          },
+          {
+            "title": "Red clover",
+            "subtitle": "<em>Trifolium pratense</em>",
+            "photo": "red-clover"
+          }
+        ]
+      },
+      {
+        "id": "herb",
+        "title": "Other grassland herbs",
+        "leaves": [
+          {
+            "title": "Ribwort plantain",
+            "subtitle": "<em>Plantago lanceolata</em>",
+            "photo": "ribwort-plantain"
+          },
+          {
+            "title": "Brown knapweed",
+            "subtitle": "<em>Centaurea jacea</em>",
+            "photo": "brown-knapweed"
+          },
+          {
+            "title": "Black knapweed",
+            "subtitle": "<em>Centaurea nigra</em>",
+            "photo": "black-knapweed"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "heathland",
+    "title": "Heathland",
+    "branches":[
+      {
+        "id": "macchia",
+        "title": "Mediterranean macchia",
+        "leaves": [
+          {
+            "title": "Strawberry tree",
+            "subtitle": "<em>Arbutus unedo</em>",
+            "photo": "strawberry-tree"
+          },
+          {
+            "title": "Myrtle",
+            "subtitle": "<em>Myrtus communis</em>",
+            "photo": "myrtle"
+          },
+          {
+            "title": "Mastic tree",
+            "subtitle": "<em>Pistacia lentiscus</em>",
+            "photo": "mastic-tree"
+          },
+          {
+            "title": "Turpentine tree",
+            "subtitle": "<em>Pistacia terebinthus</em>",
+            "photo": "turpentine-tree"
+          }
+        ]
+      }      
+    ]
+  },
+  {
+    "id": "wetland",
+    "title": "Wetland and Coastal",
+    "branches":[
+      {
+        "id": "coast",
+        "title": "Coastal",
+        "leaves": [
+          {
+            "title": "White clover",
+            "subtitle": "<em>Trifolium repens</em>",
+            "photo": "white-clover"
+          }
+        ]
+      }      
+    ]
+  }
+]

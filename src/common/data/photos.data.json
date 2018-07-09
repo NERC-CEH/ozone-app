@@ -1,0 +1,252 @@
+{
+  "cream-spots-clover": {
+    "title": "Pale cream spotting in white clover (<em>Trifolium repens</em>)",
+    "source":"G Mills"
+  },
+  "bronze-spots-hornbeam": {
+    "title": "Bronze spots between leaf veins in Hornbeam (<em>Carpinus betulus</em>)",
+    "source":"G Mills"
+  },
+  "upper-surface-elm": {
+    "title": "The upper surface of an ozone-damaged wych elm (<em>Ulmus glabra</em>) leaf",
+    "source":"M J Sanz and V Calatayud"
+  },
+  "lower-surface-elm": {
+    "title": "The lower surface of an ozone-damaged wych elm (<em>Ulmus glabra</em>) leaf",
+    "source":"M J Sanz and V Calatayud"
+  },
+  "older-leaves-birch": {
+    "title": "Ozone symptoms are more severe on the older leaves of this Silver birch tree (<em>Betula pendula</em>)",
+    "source":"F Hayes"
+  },
+  "fungal-tomato": {
+    "title": "Fungal disease in tomato (<em>Lycopersicon esculentum</em>)",
+    "text": "Fungal disease in tomato producing necrotic spots surrounded by yellow areas",
+    "source":"E Calvo (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "mildew-ash": {
+    "title": "Powdery mildew in ash (<em>Fraxinus excelsior</em>)",
+    "text": "Powdery mildew can produce white areas (hyphae of the fungus) on the underside of the leaf.",
+    "source":"E Calvo (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "mildew-ash-2": {
+    "title": "Powdery mildew in ash (<em>Fraxinus excelsior</em>)",
+    "text": "Powdery mildew can produce white areas (hyphae of the fungus) on the underside of the leaf.",
+    "source":"E Calvo (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "virus-melon": {
+    "title": "Viral disease in muskmelon (<em>Cucumis melo</em>)",
+    "text": "Melon necrotic spot virus in muskmelon.",
+    "source":"C Martin"
+  },
+  "miner-beech": {
+    "title": "Insect damage in beech (<em>Fagus sylvatica</em>)",
+    "text": "This beech leaf shows interveinal stippling (ozone damage) however the necrotic tissue is caused by the beech leaf miner (<em>Rhynchaenus fagi</em>).",
+    "source":"Innes et al. 2001"
+  },
+  "mite-bean": {
+    "title": "Red spider mites on french bean (<em>Phaseolus vulgaris</em>)",
+    "text": "Red spider mites on the underside of french bean leaves.",
+    "source":"E Calvo (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "mite-willow": {
+    "title": "Red spider mites on grey willow (<em>Salix atrocinerea</em>)",
+    "text": "Mite symptoms are not restricted to interveinal areas of this Grey willow leaf.",
+    "source":"E Calvo (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "wheat": {
+    "title": "Common wheat (<em>Triticum aestivum</em> L., cv. Korongo)",
+    "source":"K Sharps"
+  },
+  "durum-wheat": {
+    "title": "Durum wheat (<em>Triticum durum</em> Desf.)",
+    "source":"R Marzuoli"
+  },
+  "maize": {
+    "title": "Maize (<em>Zea mays</em>)",
+    "source":"D Velissariou"
+  },
+  "rice": {
+    "title": "Rice (<em>Oryza sativa</em>)",
+    "source":"M Frei"
+  },
+  "finger-millet": {
+    "title": "Finger millet (<em>Eleusine coracana</em>, cv. KNE 814)",
+    "source":"K Sharps"
+  },
+  "pearl-millet": {
+    "title": "Pearl millet (<em>Pennisetum glaucum</em>, cv. Kat/PM1)",
+    "source":"K Sharps"
+  },
+  "soybean": {
+    "title": "Soybean (<em>Glycine max</em>)",
+    "source":"B Gimeno"
+  },
+  "potato": {
+    "title": "Potato (<em>Solanum tuberosum</em>)",
+    "source":"H Pleijel"
+  },
+  "french-bean": {
+    "title": "Common bean (<em>Phaseolus vulgaris</em>)",
+    "source":"E Calvo (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "pinto-bean": {
+    "title": "Pinto bean (<em>Phaseolus vulgaris</em>, cv. Pinto)",
+    "source":"K Sharps"
+  },
+  "turtle-bean": {
+    "title": "Black turtle bean (<em>Phaseolus vulgaris</em>, cv. Black turtle)",
+    "source":"K Sharps"
+  },
+  "mung-bean": {
+    "title": "Mung bean (<em>Vigna radiata</em>)",
+    "source":"K Sharps"
+  },
+  "peas": {
+    "title": "Peas (<em>Pisum sativum</em>)",
+    "source":"K Sharps"
+  },
+  "onion": {
+    "title": "Onion (<em>Allium cepa</em>)",
+    "source":"D Velissariou"
+  },
+  "tomato": {
+    "title": "Tomato (<em>Lycopersicon esculentum</em>)",
+    "source":"V Bermejo"
+  },
+  "grape": {
+    "title": "Grape (<em>Vitis vinifera</em>)",
+    "source":"D Velissariou"
+  },
+  "watermelon": {
+    "title": "Watermelon (<em>Citrullus lanatus</em>)",
+    "source":"B Gimeno"
+  },
+  "muskmelon": {
+    "title": "Muskmelon (<em>Cucumis melo</em>)",
+    "source":"D Velissariou"
+  },
+  "courgette": {
+    "title": "Courgette (<em>Cucurbita pepo</em>)",
+    "source":"D Velissariou"
+  },
+  "lettuce": {
+    "title": "Lettuce (<em>Lactuca sativa</em>)",
+    "source":"E Calvo (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "spinach": {
+    "title": "Spinach (<em>Spinacia oleracea</em>)",
+    "source":"E Calvo (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "chard": {
+    "title": "Chard (<em>Beta vulgaris</em>)",
+    "source":"E Calvo (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "chicory": {
+    "title": "Chicory (<em>Cichorium intybus</em>)",
+    "source":"D Velissariou"
+  },
+  "parsley": {
+    "title": "Parsley (<em>Petroselinum crispum</em>)",
+    "source":"D Velissariou"
+  },
+  "birch": {
+    "title": "Birch (<em>Betula pendula</em>)",
+    "source":"Courtesy of Innes et al. 2001 (<a href='http://www.ozone.wsl.ch/'>www.ozone.wsl.ch</a>)"
+  },
+  "beech": {
+    "title": "Beech (<em>Fagus sylvatica</em>)",
+    "source":"Courtesy of Innes et al. 2001 (<a href='http://www.ozone.wsl.ch/'>www.ozone.wsl.ch</a>)"
+  },
+  "ash": {
+    "title": "Ash (<em>Fraxinus excelsior</em>)",
+    "text": "Advanced upper-leaf stippling of older leaves.",
+    "source":"Courtesy of Innes et al. 2001 (<a href='http://www.ozone.wsl.ch/'>www.ozone.wsl.ch</a>)"
+  },
+  "narrow-leaved-ash": {
+    "title": "Narrow-leaved ash (<em>Fraxinus angustifolia</em>)",
+    "source":" V Calatayud (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "flowering-ash": {
+    "title": "Flowering ash (<em>Fraxinus ornus</em>)",
+    "source":" V Calatayud (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "sessile-oak": {
+    "title": "Sessile oak (<em>Quercus petraea</em>)",
+    "text": "Brown interveinal stippling.",
+    "source":"M Broadmeadow"
+  },
+  "poplar": {
+    "title": "Poplar (<em>Populus nigra</em>)",
+    "source":" V Calatayud (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "field-maple": {
+    "title": "Field maple (<em>Acer campestre</em>)",
+    "source":" V Calatayud (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "italian-maple": {
+    "title": "Itlaian mapel (<em>Acer opalus</em>)",
+    "source":" V Calatayud (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "white-mulberry": {
+    "title": "White mulberry (<em>Morus alba</em>)",
+    "source":" V Calatayud (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "aleppo-pine": {
+    "title": "Aleppo pine (<em>Pinus halepensis</em>)",
+    "source":" V Calatayud (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "hawthorn": {
+    "title": "Hawthorn (<em>Crataegus monogyna</em>)",
+    "source":"Courtesy of Innes et al. 2001 (<a href='http://www.ozone.wsl.ch/'>www.ozone.wsl.ch</a>)"
+  },
+  "honeysuckle": {
+    "title": "Honeysuckle (<em>Lonicera implexa</em>)",
+    "source":"M J Sanz and V Calatayud (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "wayfaring-tree": {
+    "title": "Wayfaring tree (<em>Viburnum lantana</em>)",
+    "source":"Courtesy of Innes et al. 2001 (<a href='http://www.ozone.wsl.ch/'>www.ozone.wsl.ch</a>)"
+  },
+  "white-clover": {
+    "title": "White clover (<em>Trifolium repens</em>)",
+    "source":"G Mills"
+  },
+  "red-clover": {
+    "title": "Red clover (<em>Trifolium pratense</em>)",
+    "source":"P Bungener"
+  },
+  "ribwort-plantain": {
+    "title": "Ribwort plantain (<em>Plantago lanceolata</em>)",
+    "text": "Chlorotic yellowing of leaves. Note that it can be difficult to distinguish between ozone damage and other causes of leaf yellowing, for example, mineral deficiencies or natural leaf aging.",
+    "source":"P Bungener"
+  },
+  "brown-knapweed": {
+    "title": "Brown knapweed (<em>Centaurea jacea</em>)",
+    "text": "Chlorotic stippling.",
+    "source":"P Bungener"
+  },
+  "black-knapweed": {
+    "title": "Black knapweed (<em>Centaurea nigra</em>)",
+    "text": "Chlorotic stippling.",
+    "source":"P Bungener"
+  },
+  "strawberry-tree": {
+    "title": "Strawberry tree (<em>Arbutus unedo</em>)",
+    "text": "Leaf reddening occurs on the upper side of the leaf, while the underside is not affected.",
+    "source":"M J Sanz and V Calatayud (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "myrtle": {
+    "title": "Myrtle (<em>Myrtus communis</em>)",
+    "source":"M J Sanz (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "mastic-tree": {
+    "title": "Mastic tree (<em>Pistacia lentiscus</em>)",
+    "text": "Leaf chlorosis and brown stippling.",
+    "source":"V Calatayud (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  },
+  "turpentine-tree": {
+    "title": "Turpentine tree (<em>Pistacia terebinthus</em>)",
+    "source":"V Calatayud (<a href='http://www.ozoneinjury.org'>www.ozoneinjury.org</a>)"
+  }
+}

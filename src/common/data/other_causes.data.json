@@ -1,0 +1,73 @@
+[
+  {
+    "id": "fungal",
+    "title": "Fungal diseases",
+    "leaves": [
+      {
+        "text": "Look for dark brown or black patches, signs of powder on the leaf surface, leaf rust, or general leaf surface yellowing."
+      },
+      {
+        "title": "Fungal disease",
+        "subtitle": "in tomato (<em>Lycopersicon esculentum</em>)",
+        "photo": "fungal-tomato"
+      },
+    {
+        "title": "Powdery mildew",
+        "subtitle": "in ash (<em>Fraxinus excelsior</em>)",
+        "photo": "mildew-ash"
+      },
+      {
+        "title": "Powdery mildew",
+        "subtitle": "in ash (<em>Fraxinus excelsior</em>)",
+        "photo": "mildew-ash-2"
+      }
+    ]
+  },
+  {
+    "id": "viral",
+    "title": "Viral diseases",
+    "leaves": [
+      {
+        "text": "Look for patterns on the leaves or fruit, including spots, streaks or mosaics. Leaves may be rolled or curled and there may be spots of dead brown tissue."
+      },
+      {
+        "title": "Viral disease",
+        "subtitle": "on muskmelon(<em>Cucumis melo</em>)",
+        "photo": "virus-melon"
+      }
+    ]
+  },
+  {
+    "id": "insect",
+    "title": "Leaf biting insects",
+    "leaves": [
+      {
+        "text": "Holes can be seen on the leaf, which go straight through the surface. Leaf miners (larvae of insects that eat plant tissue) can cause linear patterns of necrotic tissue."
+      },
+      {
+        "title": "Insect damage",
+        "subtitle": "on beech (<em>Fagus sylvatica</em>)",
+        "photo": "miner-beech"
+      }
+    ]
+  },
+  {
+    "id": "mite",
+    "title": "Red spider mites",
+    "leaves": [
+      {
+        "text": "These mites can be common inside glass houses, look for small, crawling pin-head sized insects and white webbing on the leaves. Unlike ozone damage, spider mite symptoms can be found on the underside of leaves and are not restricted to interveinal areas."
+      },
+      {
+        "title": "Spider mites",
+        "subtitle": "on french bean (<em>Phaseolus vulgaris</em>)",
+        "photo": "mite-bean"
+      },
+      {
+        "title": "Spider mites",
+        "subtitle": "on grey willow (<em>Salix atrocinerea</em>)",
+        "photo": "mite-willow"
+      }
+    ]
+  }
+]
