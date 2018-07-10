@@ -34,13 +34,6 @@
   </a>
 </li>
 
-<li class="table-view-divider"><%= t("Info") %></li>
-<li class="table-view-cell">
-  <a href="#info/about" class="navigate-right">
-    <span class="media-object pull-left icon icon-info"></span>
-    <%= t("About") %>
-  </a>
-</li>
 <li class="table-view-cell">
   <a href="#info/help" class="navigate-right">
     <span class="media-object pull-left icon icon-help"></span>
