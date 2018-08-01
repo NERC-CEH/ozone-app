@@ -15,19 +15,19 @@
   </li>
   <li class="table-view-cell">
     <a href="#info/symptoms" class="navigate-right">
-      <span class="media-object pull-left icon icon-wasp"></span>
+      <span class="media-object pull-left icon icon-stethoscope"></span>
       Symptoms of ozone injury
     </a>
   </li>
   <li class="table-view-cell">
     <a href="#info/examples" class="navigate-right">
-      <span class="media-object pull-left icon icon-wasp"></span>
+      <span class="media-object pull-left icon icon-leaf"></span>
       Examples of ozone injury
     </a>
   </li>
   <li class="table-view-cell">
     <a href="#info/other-causes" class="navigate-right">
-      <span class="media-object pull-left icon icon-wasp"></span>
+      <span class="media-object pull-left icon icon-bug"></span>
       Other causes of leaf damage
     </a>
   </li>
