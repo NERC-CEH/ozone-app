@@ -25,7 +25,8 @@
               title: leaf.title,
               subtitle: leaf.subtitle,
               file: leaf.photo,
-              text: leaf.text
+              text: leaf.text,
+              id: leaf.id
             }));
           });
         }

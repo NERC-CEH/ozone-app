@@ -41,14 +41,14 @@
     }
 
     .leaflet-control-container .leaflet-top {
-      top: 95px;
+      top: 140px;
     }
 
-    &.hiddenName {
-      .leaflet-control-container .leaflet-top {
-        top: 50px;
-      }
-    }
+    // &.hiddenName {
+    //   .leaflet-control-container .leaflet-top {
+    //     top: 50px;
+    //   }
+    // }
 
     .leaflet-control-layers label {
       margin: 10px 5px;
@@ -236,12 +236,30 @@ input#grid-ref:-ms-input-placeholder {
       }
     }
 
-    #location-name-row {
+    #location-name-row,
+    #country-row {
       overflow: initial;
       span {
         width: 80%;
       }
     }
+    #sensitive-row {
+      overflow: initial;
+      label {
+        float: none;
+        padding: 0;
+        width: 80%;
+        background: transparent;
+        border: none;
+        display: inline-block;
+        .radio-content {
+          .item-content {
+            background: transparent;
+          }
+        }
+      }
+    }
+
   }
 }
 

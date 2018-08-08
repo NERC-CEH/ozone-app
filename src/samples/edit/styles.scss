@@ -67,13 +67,26 @@
 
 .inputs {
   .table-view-cell a {
-    overflow: hidden;
+    // short titles on inputs
     text-overflow: ellipsis;
     white-space: nowrap;
+    &.question {
+      // long questions on inputs
+      text-overflow: clip;
+      white-space: normal;
+      margin-left: 0;
+    }
   }
 }
 
+.answer {
+  // reply to long question
+  font-size: $text-font-size;
+  color: $color-gray-dark;
+}
+
 .descript {
+  // response to short title
   width: 52%;
 
   &.short {

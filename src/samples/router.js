@@ -14,9 +14,13 @@ import ListController from './list/controller';
 import ShowController from './show/controller';
 import EditController from './edit/controller';
 import EditLocationController from '../common/pages/location/controller';
+import EditInjuryController from './edit/injury/controller';
+import EditWeatherController from './edit/weather/controller';
+import EditPollutionController from './edit/pollution/controller';
 import EditAttrController from './attr/controller';
 import ActivitiesController from '../common/pages/activities/controller';
-import TaxonController from '../common/pages/taxon/controller';
+import TaxonController from '../common/pages/radio_taxon/controller';
+// import TaxonController from '../common/pages/taxon/controller';
 
 App.samples = {};
 
@@ -53,6 +57,9 @@ const Router = Marionette.AppRouter.extend({
     'samples/:id': ShowController.show,
     'samples/:id/edit(/)': EditController.show,
     'samples/:id/edit/location(/)': EditLocationController.show,
+    'samples/:id/edit/injury(/)': EditInjuryController.show,
+    'samples/:id/edit/weather(/)': EditWeatherController.show,
+    'samples/:id/edit/pollution(/)': EditPollutionController.show,
     'samples/:id/edit/activity(/)': ActivitiesController.show,
     'samples/:id/edit/:attr(/)': EditAttrController.show,
     'samples/*path': () => {

@@ -4,13 +4,14 @@
 </div>
 <% } %>
 
-<ul class="list">
 <% obj.selection.forEach((option) => { %>
-  <li class="item item-checkbox item-small">
-    <label class="checkbox">
-      <input type="checkbox" value="<%= option %>" <%- obj.selected.indexOf(option) >= 0 ? 'checked' : ''%>>
-    </label>
-    t(<%= option %>)
-  </li>
+  <label class="item item-radio">
+    <input type="checkbox" value="<%= option.value %>" <%- obj.selected && obj.selected.indexOf(option.value) >= 0 ? 'checked' : ''%>>
+    <div class="radio-content">
+      <div class="item-content">
+        <%= t(option.label || option.value) %>
+      </div>
+      <i class="radio-icon icon-check"></i>
+    </div>
+  </label>
 <% }) %>
-</ul>

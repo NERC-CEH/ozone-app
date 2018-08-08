@@ -14,7 +14,6 @@ const HeaderView = Marionette.View.extend({
 
   events: {
     'change #location-name': 'changeName',
-    'typeahead:select #location-name': 'changeName',
     'change #location-gridref': 'changeGridRef',
     'keyup #location-gridref': 'keyupGridRef',
     'blur #location-name': 'blurInput',
@@ -51,9 +50,10 @@ const HeaderView = Marionette.View.extend({
    */
   onAttach() {
     const appModel = this.model.get('appModel');
-    const strs = appModel.get('locations');
 
-    this.$el.find('.typeahead').typeahead(
+    // Attaches suggestions to the location name search.
+    let strs = appModel.get('locations');
+    this.$el.find('#location-name').typeahead(
       {
         hint: false,
         highlight: false,
@@ -65,6 +65,25 @@ const HeaderView = Marionette.View.extend({
         source: typeaheadSearchFn(strs, 3, a => a.name),
       }
     );
+
+    // Attaches suggestions to the country search.
+    const sample = this.model.get('sample');
+    const surveyAttrs = sample.getSurvey().attrs;
+    const attrConfig = surveyAttrs['smp']['country'];
+    strs = Object.keys(attrConfig.values);
+    this.$el.find('#country').typeahead(
+      {
+        hint: false,
+        highlight: false,
+        minLength: 0,
+      },
+      {
+        limit: 3,
+        name: 'names',
+        source: typeaheadSearchFn(strs, 3),
+      }
+    );
+
   },
 
   changeName(e) {
@@ -177,28 +196,41 @@ const HeaderView = Marionette.View.extend({
 
     // location lock
     const $locationLockBtn = this.$el.find('#location-lock-btn');
-
     const disableLocationLock = location.source === 'gps';
     const locationLocked = this.isLocationLocked(disableLocationLock);
-
+    this._setLockButton($locationLockBtn, locationLocked);
     if (locationLocked) {
-      $locationLockBtn.addClass('icon-lock-closed');
-      $locationLockBtn.removeClass('icon-lock-open');
       $locationLockBtn.removeClass('disabled');
-    } else {
-      $locationLockBtn.addClass('icon-lock-open');
-      $locationLockBtn.removeClass('icon-lock-closed');
     }
 
     // location name lock
-    const $nameLockBtn = this.$el.find('#name-lock-btn');
+    const $nameLockBtn = this.$el.find('#location-name-lock-btn');
     const nameLocked = appModel.isAttrLocked(sample, 'locationName');
-    if (nameLocked) {
-      $nameLockBtn.addClass('icon-lock-closed');
-      $nameLockBtn.removeClass('icon-lock-open');
+    this._setLockButton($nameLockBtn, nameLocked);
+
+    // country  lock
+    const $countryLockBtn = this.$el.find('#country-lock-btn');
+    const countryLocked = appModel.isAttrLocked(sample, 'country');
+    this._setLockButton($countryLockBtn, countryLocked);
+
+    // sensitive  lock
+    const $sensitiveLockBtn = this.$el.find('#sensitive-lock-btn');
+    const sensitiveLocked = appModel.isAttrLocked(sample, 'sensitive');
+    this._setLockButton($sensitiveLockBtn, sensitiveLocked);
+  },
+
+  /**
+   * Set classes on a lock button to show its state.
+   * @param {jQuery object} $button  Button to update.
+   * @param {boolean} locked  True if locked.
+   */
+  _setLockButton($button, locked) {
+    if (locked) {
+      $button.addClass('icon-lock-closed');
+      $button.removeClass('icon-lock-open');
     } else {
-      $nameLockBtn.addClass('icon-lock-open');
-      $nameLockBtn.removeClass('icon-lock-closed');
+      $button.addClass('icon-lock-open');
+      $button.removeClass('icon-lock-closed');
     }
   },
 
@@ -223,6 +255,8 @@ const HeaderView = Marionette.View.extend({
     const locationLocked = this.isLocationLocked(disableLocationLock);
     const sample = this.model.get('sample');
     const nameLocked = appModel.isAttrLocked(sample, 'locationName');
+    const countryLocked = appModel.isAttrLocked(sample, 'country');
+    const sensitiveLocked = appModel.isAttrLocked(sample, 'sensitive');
 
     return {
       hideName: this.options.hideName,
@@ -230,8 +264,12 @@ const HeaderView = Marionette.View.extend({
       disableLocationLock,
       locationName: location.name,
       value,
+      country: sample.get('country'),
+      sensitive: sample.metadata.sensitive,
       locationLocked,
       nameLocked,
+      countryLocked,
+      sensitiveLocked
     };
   },
 

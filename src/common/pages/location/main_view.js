@@ -1,6 +1,7 @@
 /** ****************************************************************************
  * Location main view.
  **************************************************************************** */
+import $ from 'jquery';
 import Backbone from 'backbone';
 import Marionette from 'backbone.marionette';
 import JST from 'JST';
@@ -9,6 +10,7 @@ import CONFIG from 'config';
 import 'typeahead'; // eslint-disable-line
 import HeaderView from './main_view_header';
 import mapFunctions from './map/main';
+import StringHelp from 'helpers/string';
 import './styles.scss';
 
 const LocationView = Marionette.View.extend({
@@ -23,9 +25,11 @@ const LocationView = Marionette.View.extend({
   },
 
   triggers: {
-    'click #location-lock-btn': 'lock:click:location',
-    'click #name-lock-btn': 'lock:click:name',
     'click a[data-rel="back"]': 'navigateBack',
+  },
+
+  events: {
+    'click .lock-btn': 'lockClick',
   },
 
   childViewEvents: {
@@ -111,6 +115,39 @@ const LocationView = Marionette.View.extend({
   _getCurrentLocation() {
     return this.model.get('sample').get('location') || {};
   },
+
+  /**
+   * Returns value of specified input
+   * @param {string} attr The name of the attribute value to return.
+   */
+  getValues(attr) {
+    let value, $input;
+    switch (attr) {
+      case 'country':
+        $input = $('#country');
+        value = $input.val();
+        value = value && StringHelp.escape(value);
+      break;
+      case 'sensitive':
+      $input = $('#sensitive-row input');
+      value = $input.prop('checked');
+      break;
+    }
+    return value;
+  },
+
+  // Event handler for all lock buttons. Triggers another event which
+  // the controller listens for and passes it the name of the attribute
+  // to lock.
+  lockClick(event) {
+    const id = event.target.id;
+    // The lock buttons have names in the form attr-name-lock-btn
+    // First truncate -lock-btn
+    let attr = id.substr(0, id.length - 9);
+    // Then convert to camelCase
+    attr = _.camelCase(attr);
+    this.triggerMethod('lock:click', attr);
+  }
 });
 
 export default LocationView.extend(mapFunctions);

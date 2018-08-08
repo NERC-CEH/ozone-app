@@ -100,7 +100,6 @@ export default Marionette.View.extend({
       'smp:location': StringHelp.limit(locationPrint),
       'smp:locationName': StringHelp.limit(location.name),
       'smp:date': DateHelp.print(sample.get('date'), true),
-      'occ:comment': StringHelp.limit(occ.get('comment')),
       'smp:activity': activityTitle,
       locks: attrLocks,
     };

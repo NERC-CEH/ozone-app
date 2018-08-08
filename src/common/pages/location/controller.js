@@ -23,7 +23,7 @@ const LATLONG_REGEX = /^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((
 let locationSetFunc = null;
 
 const API = {
-  show(sampleID, subSampleID, options = {}) {
+  show(sampleID, subSampleID, options = {hideName: true}) {
     // wait till savedSamples is fully initialized
     if (savedSamples.fetching) {
       savedSamples.once('fetching:done', () => {
@@ -100,13 +100,13 @@ const API = {
       API.updateLocationName(sample, locationName)
     );
 
-    mainView.on('lock:click:location', API.onLocationLockClick);
-    mainView.on('lock:click:name', API.onNameLockClick);
+    // Any lock button clicked
+    mainView.on('lock:click',  API.onLockClick);
 
     const locationIsLocked = appModel.isAttrLocked(sample, 'location');
     const nameIsLocked = appModel.isAttrLocked(sample, 'locationName');
     mainView.on('navigateBack', () => {
-      API.exit(sample, locationIsLocked, nameIsLocked);
+      API.exit(mainView, sample, locationIsLocked, nameIsLocked);
     });
   },
 
@@ -157,8 +157,11 @@ const API = {
     });
   },
 
-  exit(sample, locationWasLocked, nameWasLocked) {
+  exit(mainView, sample, locationWasLocked, nameWasLocked) {
     Log('Location:Controller: exiting.');
+
+    sample.set('country', mainView.getValues('country'));
+    sample.metadata.sensitive = mainView.getValues('sensitive');
 
     sample
       .save()
@@ -171,7 +174,7 @@ const API = {
           sample.set('location', location);
         }
 
-        API.updateLocks(location, locationWasLocked, nameWasLocked);
+        API.updateLocks(sample, location, locationWasLocked, nameWasLocked);
 
         window.history.back();
       })
@@ -184,18 +187,36 @@ const API = {
   /**
    * Updates the locks.
    */
-  updateLocks(location = {}, locationWasLocked, nameWasLocked) {
+  updateLocks(sample, location = {}, locationWasLocked, nameWasLocked) {
     Log('Location:Controller: updating locks.');
 
     this.updateLocationLock(location, locationWasLocked);
     this.updateLocationNameLock(location.name, nameWasLocked);
+
+    const countryLock = appModel.getAttrLock('smp:country')
+    if (countryLock && countryLock === true) {
+      // If country has been locked then save the locked value.
+      appModel.setAttrLock('smp:country', sample.get('country'));
+    }
+
+    const sensitiveLock = appModel.getAttrLock('smp:sensitive')
+    if (sensitiveLock && sensitiveLock === true) {
+      // If sensitive has been locked then save the locked value.
+      appModel.setAttrLock('smp:sensitive', sample.metadata.sensitive);
+    }
   },
 
+  /**
+   * On exit, update the value in the location lock.
+   * @param {object} location The location.
+   * @param {boolean} locationWasLocked Whether the location was locked when show() called.
+   */
   updateLocationLock(location, locationWasLocked) {
     const currentLock = appModel.getAttrLock('smp:location');
+    /* This will either be true or false if the lock was toggled or
+    the original lock value or null if there was no locked value. */
 
-    // location
-    if (location.source !== 'gps' && location.latitude) {
+     if (location.source !== 'gps' && location.latitude) {
       const clonedLocation = _.cloneDeep(location);
 
       // remove location name as it is locked separately
@@ -210,17 +231,23 @@ const API = {
         appModel.setAttrLock('smp:location', clonedLocation);
       }
     } else if (currentLock === true) {
-      // reset if no location or location name selected but locked is clicked
+      // reset if no location selected but locked is clicked
       appModel.unsetAttrLock('smp:location');
     }
   },
-
+  /**
+   * On exit, update the value in the locationName lock.
+   * @param {string} locationName The value of the location name.
+   * @param {boolean} nameWasLocked Whether the name was locked when  show() called.
+   */
   updateLocationNameLock(locationName, nameWasLocked) {
     if (!locationName) {
       return;
     }
 
     const currentLockedName = appModel.getAttrLock('smp:locationName');
+    /* This will either be true or false if the lock was toggled or
+    the original lock value or null if there was no locked value. */
 
     if (currentLockedName) {
       if (currentLockedName === true || nameWasLocked) {
@@ -339,22 +366,12 @@ const API = {
     });
   },
 
-  onLocationLockClick() {
-    Log('Location:Controller: executing onLocationLockClick.');
-    // invert the lock of the attribute
-    // real value will be put on exit
-    appModel.setAttrLock('smp:location', !appModel.getAttrLock('smp:location'));
-  },
-
-  onNameLockClick() {
-    Log('Location:Controller: executing onNameLockClick.');
-    // invert the lock of the attribute
-    // real value will be put on exit
-    appModel.setAttrLock(
-      'smp:locationName',
-      !appModel.getAttrLock('smp:locationName')
-    );
-  },
+  onLockClick(attr) {
+    attr = 'smp:' + attr;
+    // Invert the lock of the attribute.
+    // Real value will be put on exit.
+    appModel.setAttrLock(attr, !appModel.getAttrLock(attr));
+  }
 };
 
 export { API as default };

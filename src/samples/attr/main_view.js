@@ -6,6 +6,7 @@ import _ from 'lodash';
 import Log from 'helpers/log';
 import InputView from 'common/views/inputView';
 import RadioInputView from 'common/views/radioInputView';
+import CheckboxInputView from 'common/views/checkboxInputView';
 import TextareaView from 'common/views/textareaInputView';
 import NumberAttrView from './numberAttrView';
 
@@ -80,6 +81,13 @@ export default Marionette.View.extend({
 
       case 'radio':
         attrView = new RadioInputView({
+          config: attrConfig,
+          default: currentVal,
+        });
+        break;
+
+        case 'checkbox':
+        attrView = new CheckboxInputView({
           config: attrConfig,
           default: currentVal,
         });

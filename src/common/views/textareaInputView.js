@@ -21,7 +21,7 @@ export default Marionette.View.extend({
 
   getValues() {
     const value = this.$el.find('textarea').val();
-    return StringHelp.escape(value);
+    return value && StringHelp.escape(value);
   },
 
   onAttach() {
