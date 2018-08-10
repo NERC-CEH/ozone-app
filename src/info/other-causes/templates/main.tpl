@@ -11,7 +11,9 @@
         title: branch.title,
         data: branch,
         branchTemplate: obj.branchTemplate,
-        leafTemplate: obj.leafTemplate
+        leafTemplate: obj.leafTemplate,
+        path: 'other-causes',
+        selected: obj.selected
       }));
   });
   %>

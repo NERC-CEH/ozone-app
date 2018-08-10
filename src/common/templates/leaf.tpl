@@ -2,7 +2,7 @@
   <li class="table-view-cell">
     <% if (obj.file) { %>
 
-      <a href="#photo/examples/<%= obj.file %>" class="navigate-right">
+      <a href="#photo/<%= obj.path %>/<%= obj.parent %>/<%= obj.file %>" class="navigate-right">
         <span class="media-object pull-left">
           <img src="images/thumbs/<%= obj.file %>.jpg" alt=""/>
         </span>

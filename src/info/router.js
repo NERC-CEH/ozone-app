@@ -7,6 +7,7 @@ import Log from 'helpers/log';
 import CONFIG from 'config';
 import JST from 'JST';
 import App from 'app';
+import appModel from 'app_model';
 import radio from 'radio';
 import CommonController from '../common/controller';
 import HomeController from './home/controller';
@@ -79,7 +80,8 @@ const Router = Marionette.AppRouter.extend({
         model: new Backbone.Model({
           data: symptomsData,
           branchTemplate: JST['common/branch'],
-          leafTemplate: JST['common/leaf']
+          leafTemplate: JST['common/leaf'],
+          selected: appModel.get('infopath')
         }),
       });
     },
@@ -91,7 +93,8 @@ const Router = Marionette.AppRouter.extend({
         model: new Backbone.Model({
           data: examplesData,
           branchTemplate: JST['common/branch'],
-          leafTemplate: JST['common/leaf']
+          leafTemplate: JST['common/leaf'],
+          selected: appModel.get('infopath')
         }),
       });
     },
@@ -103,12 +106,13 @@ const Router = Marionette.AppRouter.extend({
         model: new Backbone.Model({
           data: otherCausesData,
           branchTemplate: JST['common/branch'],
-          leafTemplate: JST['common/leaf']
+          leafTemplate: JST['common/leaf'],
+          selected: appModel.get('infopath')
         }),
       });
     },
 
-   'photo/:group/:filename': PhotoController.show,
+   'photo/:path/:group/:filename': PhotoController.show,
 
 
     'info/*path': () => {

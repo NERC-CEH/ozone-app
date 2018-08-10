@@ -389,6 +389,14 @@ header .subtitle {
   }
 }
 
+// no border on nested table-view needed either
+.table-view .table-view {
+  border-top: none;
+  border-bottom: none;
+  margin-top: 11px;
+  margin-bottom: -11px;
+}
+
 li h3 {
   font-size: 1em;
   font-weight: 700;

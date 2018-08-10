@@ -1,11 +1,12 @@
 import Backbone from 'backbone';
+import appModel from 'app_model';
 import radio from 'radio';
 import MainView from './main_view';
 import HeaderView from '../../common/views/header_view';
 import photoData from '../../common/data/photos.data.json';
 
 const API = {
-  show(group,filename) {
+  show(path, group, filename) {
     //!!!BREAKPOINT
     const photo = photoData[filename];
     const mainView = new MainView({
@@ -23,6 +24,9 @@ const API = {
       }),
     });
     radio.trigger('app:header', headerView);
+
+    // Store branch of accordion from which photo came so it can be opened when going back.
+    appModel.set('infopath', path + '+' + group);
   },
 
 

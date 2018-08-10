@@ -10,7 +10,9 @@
         title: branch.title,
         data: branch,
         branchTemplate: obj.branchTemplate,
-        leafTemplate: obj.leafTemplate
+        leafTemplate: obj.leafTemplate,
+        path: 'examples',
+        selected: obj.selected
       }));
   });
   %>
