@@ -1,3 +1,4 @@
+import App from 'app';
 import Log from 'helpers/log';
 import radio from 'radio';
 import appModel from 'app_model';
@@ -17,7 +18,8 @@ const API = {
   exit() {
     Log('Info:Welcome:Controller: exit.');
     appModel.save({ showWelcome: false });
-    radio.trigger('samples:list', { replace: true });
+    App.trigger('home');
+
   },
 };
 
