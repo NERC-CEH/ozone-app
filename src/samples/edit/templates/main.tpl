@@ -25,13 +25,7 @@
       <% } %>
       <% } %>
 
-      <% if (obj['smp:locationName']) { %>
-      <span class="media-object pull-right descript <%- obj.locks['smp:locationName'] ? 'lock' : '' %>"><%= obj['smp:locationName'] %></span>
-      <% } else { %>
-      <span class="media-object pull-right descript error"><%= t("Name missing") %></span>
-      <% } %>
-
-      <%= t("Location") %>
+     <%= t("Location") %>
     </a>
   </li>
 

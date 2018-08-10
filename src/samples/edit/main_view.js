@@ -98,7 +98,6 @@ export default Marionette.View.extend({
       isLocating: sample.isGPSRunning(),
       isSynchronising: sample.getSyncStatus() === Indicia.SYNCHRONISING,
       'smp:location': StringHelp.limit(locationPrint),
-      'smp:locationName': StringHelp.limit(location.name),
       'smp:date': DateHelp.print(sample.get('date'), true),
       'smp:activity': activityTitle,
       locks: attrLocks,
