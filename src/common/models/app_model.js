@@ -18,8 +18,8 @@ const AppModel = Backbone.Model.extend({
     locations: [],
     attrLocks: { general: {}, complex: {} },
     autosync: true,
-    useGridRef: true,
-    useGridMap: true,
+    useGridRef: false,
+    useGridMap: false,
 
     useExperiments: false,
     useGridNotifications: false,

@@ -21,8 +21,8 @@ describe('App Model', () => {
       .to.be.an('object')
       .and.has.all.keys('general', 'complex');
     expect(appModel.get('autosync')).to.be.equal(true);
-    expect(appModel.get('useGridRef')).to.be.equal(true);
-    expect(appModel.get('useGridMap')).to.be.equal(true);
+    expect(appModel.get('useGridRef')).to.be.equal(false);
+    expect(appModel.get('useGridMap')).to.be.equal(false);
     expect(appModel.get('gridSquareUnit')).to.be.equal('monad');
   });
 
