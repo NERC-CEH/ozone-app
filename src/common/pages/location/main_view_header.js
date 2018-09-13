@@ -75,7 +75,7 @@ const HeaderView = Marionette.View.extend({
       {
         hint: false,
         highlight: false,
-        minLength: 0,
+        minLength: 1,
       },
       {
         limit: 3,

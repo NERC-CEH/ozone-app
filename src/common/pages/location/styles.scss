@@ -241,6 +241,10 @@ input#grid-ref:-ms-input-placeholder {
       overflow: initial;
       span {
         width: 80%;
+        padding-left: 16px;
+        input {
+          font-size: 16px;
+        }
       }
     }
     #sensitive-row {

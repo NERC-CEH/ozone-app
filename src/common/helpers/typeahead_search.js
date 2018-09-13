@@ -19,7 +19,7 @@ export default function(strs = [], max = 30, strProcessor) {
     const matches = [];
 
     // regex used to determine if a string contains the substring `q`
-    const substrRegex = new RegExp(escapeRegExp(query), 'i');
+    const substrRegex = new RegExp('\\b' + escapeRegExp(query), 'i');
 
     // iterate through the pool of strings and for any string that
     // contains the substring `q`, add it to the `matches` array
