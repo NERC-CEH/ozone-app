@@ -454,10 +454,6 @@ const survey = {
     if (!location.latitude) {
       attributes.location = 'missing';
     }
-    // location name
-    if (!location.name) {
-      attributes['location name'] = 'missing';
-    }
 
     // date
     if (!attrs.date) {
