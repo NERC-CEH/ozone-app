@@ -4,7 +4,7 @@
 import Indicia from 'indicia';
 
 const HOST =
-  process.env.APP_INDICIA_API_HOST || 'https://www.brc.ac.uk/icpveg';
+  process.env.APP_INDICIA_API_HOST || 'https://www.brc.ac.uk/icpveg/';
 
 
 const notInTest = process.env.ENV !== 'test';
