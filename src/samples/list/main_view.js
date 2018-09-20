@@ -142,7 +142,6 @@ const SampleView = Marionette.View.extend({
       onDatabase: syncStatus === Indicia.SYNCED,
       isLocating: sample.isGPSRunning(),
       location: locationPrint,
-      locationName: location.name,
       isSynchronising: syncStatus === Indicia.SYNCHRONISING,
       date,
       taxon,

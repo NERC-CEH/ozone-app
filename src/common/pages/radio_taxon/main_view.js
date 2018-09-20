@@ -19,7 +19,8 @@ export default Marionette.View.extend({
     const species = {
       group: 3,
       common_name: $input.attr('value'),
-      warehouse_id: $input.attr('id')
+      warehouse_id: $input.attr('id'),
+      found_in_name: 'common_name'
     };
     this.trigger('taxon:selected', species);
   },

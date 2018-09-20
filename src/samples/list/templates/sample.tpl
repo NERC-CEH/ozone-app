@@ -39,11 +39,7 @@
         @
 
         <% if (obj.location) { %>
-          <% if (obj.locationName) { %>
-          <span class="location <%= obj.locationLocked && 'locked' %>"><%= obj.locationName %></span>
-          <%  } else { %>
-            <span class="location error"><%= t("No location name") %></span>
-          <% } %>
+          <span class="location <%= obj.locationLocked && 'locked' %>"><%= obj.location %></span>
         <% } else { %>
           <% if (obj.isLocating) { %>
           <span class="location warn"><%= t("Locating") %>...</span>
