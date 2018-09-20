@@ -11,10 +11,10 @@
 <%  if(obj.activity_title || obj.training) { %>
 <div id="subheader">
   <% if (obj.activity_title) { %>
-  <div class="activity"></div>
+  <div class="activity"><%- t(obj.activity_title) %></div>
   <% } %>
   <% if (obj.training) { %>
-  <div class="training"></div>
+  <div class="training"><%= t("Training") %></div>
   <% } %>
 </div>
 <% } %>

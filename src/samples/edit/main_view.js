@@ -46,7 +46,7 @@ export default Marionette.View.extend({
     const sample = this.model.get('sample');
     let amount = 0;
 
-    let classes = 'attr-edit slim ';
+    let classes = 'attr-edit ';
 
     if (sample.get('activity')) {
       amount++;

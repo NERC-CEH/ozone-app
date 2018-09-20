@@ -261,7 +261,9 @@ header .subtitle {
   }
 }
 
-// content bands
+// Content bands
+// Applied to content to make room for subheaders.
+// Use slim if subheader contains no text and is just a colour strip.
 .band-margin-1 {
   margin-top: 36px;
 
