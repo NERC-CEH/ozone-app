@@ -13,6 +13,7 @@ const API = {
     });
     radio.trigger('app:main', mainView);
     mainView.on('sample', API.sample);
+    mainView.on('list', API.list);
 
     // HEADER
     radio.trigger('app:header:hide');
@@ -21,7 +22,7 @@ const API = {
     radio.trigger('app:footer:hide');
   },
 
-  // sample species
+  // Add new record
   sample() {
     // create new sample
     const sample = new Sample();
@@ -38,6 +39,11 @@ const API = {
       radio.trigger('samples:edit', sample.cid);
     });
   },
+
+  // List records
+  list() {
+    radio.trigger('samples:list', { replace: true });
+  }
 };
 
 export { API as default };

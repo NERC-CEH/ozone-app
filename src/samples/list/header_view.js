@@ -3,6 +3,7 @@
  **************************************************************************** */
 import Marionette from 'backbone.marionette';
 import JST from 'JST';
+import App from 'app';
 
 export default Marionette.View.extend({
   id: 'samples-header',
@@ -16,10 +17,18 @@ export default Marionette.View.extend({
 
   events: {
     'change input': 'photoUpload',
+    'click a[data-rel="back"]': 'navigateHome',
   },
 
   photoUpload(e) {
     this.trigger('photo:upload', e);
+  },
+
+  navigateHome() {
+    // Navigate home rather than back because the sample list can
+    // be accessed from the home menu or after record submission.
+    // I don't want to go back to the record entry.
+    App.triggerMethod('home');
   },
 
   onAttach() {

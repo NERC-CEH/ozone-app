@@ -38,6 +38,12 @@
     </a>
   </li>
   <li class="table-view-cell">
+    <a id="list-btn" class="navigate-right">
+      <span class="media-object pull-left icon icon-list"></span>
+      Record list
+    </a>
+  </li>
+  <li class="table-view-cell">
     <a href="#info" class="navigate-right">
       <span class="media-object pull-left icon icon-settings"></span>
       <% if (obj.samples > 0) { %>

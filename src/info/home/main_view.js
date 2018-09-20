@@ -13,6 +13,7 @@ export default Marionette.View.extend({
 
   triggers: {
     'click #sample-btn': 'sample',
+    'click #list-btn': 'list',
   },
 
   initialize() {

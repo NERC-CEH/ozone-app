@@ -100,8 +100,11 @@ radio.on('samples:edit:attr', (sampleID, attrID, options = {}) => {
   }
 });
 
-radio.on('sample:saved', () => {
-  window.history.back();
+radio.on('sample:saved', (options) => {
+  // After saving a sample, go to the sample list regardless of whether
+  // the recording form was accessed from the home page or the list page.
+  App.navigate('samples', options);
+  ListController.show();
 });
 
 function syncSamples() {
