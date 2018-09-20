@@ -19,6 +19,7 @@ const CONFIG = {
   training: process.env.APP_TRAINING,
 
   gps_accuracy_limit: 100,
+  sensitivity_precision: 10000,
 
   site_url: HOST,
 

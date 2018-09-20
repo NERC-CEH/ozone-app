@@ -4,6 +4,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import Backbone from 'backbone';
+import CONFIG from 'config';
 import Indicia from 'indicia';
 import Log from 'helpers/log';
 import StringHelp from 'helpers/string';
@@ -100,6 +101,16 @@ const API = {
       API.updateLocationName(sample, locationName)
     );
 
+    // country name
+    mainView.on('location:country:change', countryName =>
+      API.updateCountryName(sample, countryName)
+    );
+
+    // sensitive
+    mainView.on('location:sensitive:toggle', active =>
+      API.updateSensitive(sample, active)
+    );
+
     // Any lock button clicked
     mainView.on('lock:click',  API.onLockClick);
 
@@ -160,9 +171,6 @@ const API = {
   exit(mainView, sample, locationWasLocked, nameWasLocked) {
     Log('Location:Controller: exiting.');
 
-    sample.set('country', mainView.getValues('country'));
-    sample.metadata.sensitive = mainView.getValues('sensitive');
-
     sample
       .save()
       .then(() => {
@@ -202,7 +210,9 @@ const API = {
     const sensitiveLock = appModel.getAttrLock('smp:sensitive')
     if (sensitiveLock && sensitiveLock === true) {
       // If sensitive has been locked then save the locked value.
-      appModel.setAttrLock('smp:sensitive', sample.metadata.sensitive);
+      // Messy use of smp to store the lock when it is an occ attribute.
+      const occ = sample.getOccurrence();
+      appModel.setAttrLock('smp:sensitive', occurrence.metadata.sensitive);
     }
   },
 
@@ -268,6 +278,20 @@ const API = {
   /**
    * Update location name that was typed in.
    * @param sample
+   * @param countryName
+   */
+  updateCountryName(sample, countryName) {
+    if (!countryName || typeof countryName !== 'string') {
+      return;
+    }
+    const escapedName = StringHelp.escape(countryName);
+    sample.set('country', escapedName);
+    sample.save();
+  },
+
+  /**
+   * Update location name that was typed in.
+   * @param sample
    * @param locationName
    */
   updateLocationName(sample, locationName) {
@@ -287,6 +311,13 @@ const API = {
 
     sample.set('location', location);
     sample.save();
+  },
+
+  updateSensitive(sample, active) {
+    const occ = sample.getOccurrence();
+    occ.metadata.sensitivity_precision = active ? CONFIG.sensitivity_precision : null;
+    occ.metadata.sensitive = active ? 1 : null;
+    occ.save();
   },
 
   /**

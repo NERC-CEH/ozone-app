@@ -249,21 +249,25 @@ input#grid-ref:-ms-input-placeholder {
     }
     #sensitive-row {
       overflow: initial;
-      label {
-        float: none;
-        padding: 0;
-        width: 80%;
-        background: transparent;
-        border: none;
+      .toggle-container {
         display: inline-block;
-        .radio-content {
-          .item-content {
-            background: transparent;
-          }
+        width: 80%;
+        height: 100%;
+        padding: 11px 0 11px 16px;
+        font-size: 16px;
+        color: $color-black;
+        background: transparent;
+        position: relative;
+        .toggle {
+          position: absolute;
+          top: 50%;
+          right: 15px;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
         }
       }
     }
-
   }
 }
 

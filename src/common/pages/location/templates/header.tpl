@@ -38,17 +38,13 @@
         <button id="sensitive-lock-btn" class="lock-btn icon icon-lock-<%- obj.sensitiveLocked ? 'closed' : 'open' %>"></button>
       <% } %>
       <span class="media-object icon icon-low-vision"></span>
-      <label class="item item-radio">
-        <input type="checkbox" value="<%= obj.sensitive %>" <%- obj.sensitive  ? 'checked' : ''%>>
-        <div class="radio-content">
-          <div class="item-content">
-            <%= t("Sensitive") %>
-          </div>
-          <i class="radio-icon icon-check"></i>
+      <div class="toggle-container" ><%= t("Sensitive") %>
+        <div id="sensitive-btn" data-setting="sensitive"
+              class="toggle no-yes <%- obj.sensitive ? 'active' : '' %>">
+          <div class="toggle-handle"></div>
         </div>
-      </label>
+      </div>  
     </div>
-  
 
   </div>
 </div>

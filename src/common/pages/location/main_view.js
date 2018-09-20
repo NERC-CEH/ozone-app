@@ -42,11 +42,19 @@ const LocationView = Marionette.View.extend({
     'name:change': function(val) {
       this.triggerMethod('location:name:change', val);
     },
+    'country:change': function(val) {
+      // Pass event up to controller.
+      this.triggerMethod('location:country:change', val);
+    },
     // eslint-disable-next-line
     'input:blur': function() {
       this._refreshMapHeight();
     },
-  },
+    'sensitive:toggle': function(active) {
+      // Pass event up to controller.
+      this.triggerMethod('location:sensitive:toggle', active);
+    },
+ },
 
   initialize() {
     Log('Location:Controller:MainView: initializing.');
@@ -114,26 +122,6 @@ const LocationView = Marionette.View.extend({
 
   _getCurrentLocation() {
     return this.model.get('sample').get('location') || {};
-  },
-
-  /**
-   * Returns value of specified input
-   * @param {string} attr The name of the attribute value to return.
-   */
-  getValues(attr) {
-    let value, $input;
-    switch (attr) {
-      case 'country':
-        $input = $('#country');
-        value = $input.val();
-        value = value && StringHelp.escape(value);
-      break;
-      case 'sensitive':
-      $input = $('#sensitive-row input');
-      value = $input.prop('checked');
-      break;
-    }
-    return value;
   },
 
   // Event handler for all lock buttons. Triggers another event which

@@ -6,6 +6,7 @@ import LocHelp from 'helpers/location';
 import Marionette from 'backbone.marionette';
 import JST from 'JST';
 import Log from 'helpers/log';
+import Device from 'helpers/device';
 import typeaheadSearchFn from 'helpers/typeahead_search';
 import 'typeahead'; // eslint-disable-line
 
@@ -15,9 +16,12 @@ const HeaderView = Marionette.View.extend({
   events: {
     'change #location-name': 'changeName',
     'change #location-gridref': 'changeGridRef',
+    'change #country': 'changeCountry',
     'keyup #location-gridref': 'keyupGridRef',
     'blur #location-name': 'blurInput',
     'blur #location-gridref': 'blurInput',
+    'toggle #sensitive-btn': 'toggleSensitive',
+    'click #sensitive-btn': 'toggleSensitive'
   },
 
   initialize() {
@@ -90,8 +94,24 @@ const HeaderView = Marionette.View.extend({
     this.triggerMethod('name:change', $(e.target).val());
   },
 
+  changeCountry(e) {
+    // Pass event up to parent view.
+    this.triggerMethod('country:change', $(e.target).val());
+  },
+
   blurInput() {
     this.triggerMethod('input:blur');
+  },
+
+  toggleSensitive(e) {
+    let active = $(e.currentTarget).hasClass('active');
+    if (e.type !== 'toggle' && !Device.isMobile()) {
+      // Device.isMobile() android generates both swipe and click
+      active = !active; // invert because it takes time to get the class
+      $(e.currentTarget).toggleClass('active', active);
+    }
+    // Pass event up to main view.
+    this.triggerMethod('sensitive:toggle', active);
   },
 
   /**
@@ -254,6 +274,7 @@ const HeaderView = Marionette.View.extend({
 
     const locationLocked = this.isLocationLocked(disableLocationLock);
     const sample = this.model.get('sample');
+    const occ = sample.getOccurrence();
     const nameLocked = appModel.isAttrLocked(sample, 'locationName');
     const countryLocked = appModel.isAttrLocked(sample, 'country');
     const sensitiveLocked = appModel.isAttrLocked(sample, 'sensitive');
@@ -265,7 +286,7 @@ const HeaderView = Marionette.View.extend({
       locationName: location.name,
       value,
       country: sample.get('country'),
-      sensitive: sample.metadata.sensitive,
+      sensitive: occ.metadata.sensitive,
       locationLocked,
       nameLocked,
       countryLocked,
