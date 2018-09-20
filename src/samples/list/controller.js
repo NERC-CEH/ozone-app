@@ -10,7 +10,8 @@ import showErrMsg from 'helpers/show_err_msg';
 import appModel from 'app_model';
 import userModel from 'user_model';
 import savedSamples from 'saved_samples';
-import Factory from 'model_factory';
+import Sample from '../../common/models/sample';
+import Occurrence from '../../common/models/occurrence';
 import MainView from './main_view';
 import LoaderView from '../../common/views/loader_view';
 import HeaderView from './header_view';
@@ -70,16 +71,6 @@ const API = {
     mainView.on('childview:create', () => API.createNewSample());
     mainView.on('childview:sample:edit:attr', (childView, attr) => {
       radio.trigger('samples:edit:attr', childView.model.cid, attr);
-    });
-
-    mainView.on('childview:taxon:add', childView => {
-      const sample = childView.model;
-      radio.trigger('samples:edit:attr', sample.cid, 'taxon', {
-        onSuccess(taxon, editButtonClicked) {
-          API.setTaxon(sample, taxon, editButtonClicked);
-        },
-        showEditButton: true,
-      });
     });
 
     mainView.on('childview:sample:delete', childView => {
@@ -173,62 +164,22 @@ const API = {
     });
   },
 
-  createNewSampleWithPhoto(...args) {
-    Factory.createSampleWithPhoto
-      .apply(this, args)
-      .then(sample => sample.save())
-      .then(sample => {
-        // add to main collection
-        savedSamples.add(sample);
-      })
-      .catch(err => {
-        Log(err, 'e');
-        radio.trigger('app:dialog:error', err);
-      });
-  },
-
   createNewSample() {
-    radio.trigger('samples:edit:attr', null, 'taxon', {
-      onSuccess(taxon, editButtonClicked) {
-        Factory.createSample('general', null, taxon)
-          .then(sample => sample.save())
-          .then(sample => {
-            // add to main collection
-            savedSamples.add(sample);
+    const sample = new Sample();
+    const occurrence = new Occurrence();
+    sample.addOccurrence(occurrence);
+    sample.save().then(() => {
+      savedSamples.add(sample);
 
-            // navigate
-            if (editButtonClicked) {
-              radio.trigger('samples:edit', sample.cid, { replace: true });
-            } else {
-              // return back to list page
-              window.history.back();
-            }
-          });
-      },
-      showEditButton: true,
+      sample.startGPS();
+
+      appModel.set('draftSampleID', sample.cid);
+
+      // navigate to sample edit
+      radio.trigger('samples:edit', sample.cid);
     });
   },
 
-  /**
-   * Sets a new taxon to an occurrence created by a photo-first method.
-   * @param sample
-   * @param taxon
-   * @param editButtonClicked
-   * @returns {*}
-   */
-  setTaxon(sample, taxon, editButtonClicked) {
-    return sample
-      .setTaxon(taxon)
-      .then(() => sample.save())
-      .then(() => {
-        if (editButtonClicked) {
-          radio.trigger('samples:edit', sample.cid, { replace: true });
-        } else {
-          // return back to list page
-          window.history.back();
-        }
-      });
-  },
 };
 
 export { API as default };

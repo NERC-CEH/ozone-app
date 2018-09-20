@@ -1,24 +1,20 @@
-<% if (obj.taxon) { %>
   <a
     <% if (!obj.isSynchronising) { %>
       href="#samples/<%- obj.id %><%- obj.onDatabase ? '' : '/edit' %>"
     <% } %>
     class="mobile">
 
-  <% } else { %>
-  <a id="add-species-btn" class="mobile">
-    <% } %>
     <% if (obj.activity) { %>
-    <div class="media-object pull-left activity"></div>
+      <div class="media-object pull-left activity"></div>
     <% } %>
     <div class="media-object pull-left photo"><%= obj.img %></div>
     <div class="pull-right">
       <% if (obj.saved) { %>
-      <% if (obj.isSynchronising) { %>
-      <div class="online-status icon icon-plus spin"></div>
-      <% } else { %>
-      <div class="online-status icon icon-send <%- obj.onDatabase ? 'cloud' : 'local' %>"></div>
-      <% } %>
+        <% if (obj.isSynchronising) { %>
+          <div class="online-status icon icon-plus spin"></div>
+        <% } else { %>
+          <div class="online-status icon icon-send <%- obj.onDatabase ? 'cloud' : 'local' %>"></div>
+        <% } %>
       <% } %>
     </div>
 

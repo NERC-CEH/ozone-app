@@ -3,29 +3,16 @@
 @import '../../common/styles/mixins.scss';
 
 //HEADER
-#samples-header {
-  @include samples-surveys-header;
-}
-
-.img-picker {
-  width: 45%;
-  display: inline-block;
-  text-align: center;
-  overflow: visible !important;
-
-  input {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    padding: 0.4em;
-    opacity: 0;
-    margin: -8px 0 !important;
-    height: inherit !important;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
+#create-new-btn {
+  min-width: 70% !important;
+  max-width: 100px;
+  margin-right: 0;
+  color: $header-color;
+  float: right;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $color-white;
+  background-color: $color-white;
 }
 
 //LIST
