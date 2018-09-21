@@ -2,10 +2,7 @@
   <li class="table-view-cell">
     <a id="species-button" class="navigate-right">
       <span class="media-object pull-left icon icon-leaf"></span>
-      <% if (obj.commonName) { %>
-      <span class="media-object pull-right descript long"><%= obj.commonName %></span>
-      <% } %>
-      <span class="media-object pull-right descript long"><i><%= obj.scientificName %></i></span>
+      <span class="media-object pull-right descript"><%= obj.commonName %></span>
       <%= t("Species") %>
     </a>
   </li>
