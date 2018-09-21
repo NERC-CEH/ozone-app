@@ -1,5 +1,5 @@
 /** ****************************************************************************
- * Sample Edit Laboratory main view.
+ * Sample Edit Injury main view.
  *****************************************************************************/
 import Marionette from 'backbone.marionette';
 import CONFIG from 'config';

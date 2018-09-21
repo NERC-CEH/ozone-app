@@ -1,5 +1,5 @@
 /** ****************************************************************************
- * Sample Edit Laboratory main view.
+ * Sample Edit Weather main view.
  *****************************************************************************/
 import Marionette from 'backbone.marionette';
 import JST from 'JST';
