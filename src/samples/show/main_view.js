@@ -42,19 +42,9 @@ export default Marionette.View.extend({
     const occ = sample.getOccurrence();
     const specie = occ.get('taxon');
 
-    // taxon
-    const scientificName = specie.scientific_name;
     const commonName = specie.common_name;
-
     const syncStatus = sample.getSyncStatus();
-
     const locationPrint = sample.printLocation();
-    const location = sample.get('location') || {};
-
-    let number = StringHelp.limit(occ.get('number'));
-    if (!number) {
-      number = StringHelp.limit(occ.get('number-ranges'));
-    }
 
     // show activity title.
     const activity = sample.get('activity');
@@ -66,15 +56,23 @@ export default Marionette.View.extend({
       site_url: CONFIG.site_url,
       isSynchronising: syncStatus === Indicia.SYNCHRONISING,
       onDatabase: syncStatus === Indicia.SYNCED,
-      scientific_name: scientificName,
       commonName,
       location: locationPrint,
-      locationName: location.name,
       date: DateHelp.print(sample.get('date'), true),
-      number,
-      stage: StringHelp.limit(occ.get('stage')),
-      identifiers: occ.get('identifiers'),
-      comment: occ.get('comment'),
+      country: sample.get('country'),
+      sensitive: occ.metadata.sensitive,
+      injurySymptoms: occ.get('injury-symptoms'),
+      injuryColour: occ.get('injury-colour'),
+      injuryLocation: occ.get('injury-location'),
+      injurySide: occ.get('injury-side'),
+      injuryAge: occ.get('injury-age'),
+      injuryExtent: occ.get('injury-extent'),
+      injuryEvidence: occ.get('injury-evidence'),
+      injuryEvidenceOther: occ.get('injury-evidence-other'),
+      weatherTemp: sample.get('weather-temp'),
+      weatherRain: sample.get('weather-rain'),
+      pollutionConcentration: sample.get('pollution-concentration'),
+      pollutionDuration: sample.get('pollution-duration'),
       activity_title: activity ? activity.title : null,
       media: occ.media,
     };

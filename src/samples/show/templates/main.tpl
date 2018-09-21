@@ -1,68 +1,86 @@
 <div class="info-message">
   <p><%= t("This record has been submitted and cannot be edited within this App") %>.
-    <% if (obj.id) { %>
-    <a href="<%= obj.site_url %>/record-details?occurrence_id=<%= obj.id %>"
-       class="btn btn-block btn-narrow">
-      <%= t("View on the ICP Vegetation website") %>
-      <span class="pull-right icon icon-link-ext"></span>
-    </a>
-    <% } else { %>
-      <%= t("Go to the") %> <a href="<%= obj.site_url %>"><%= t("ICP Vegetations website") %></a> <%= t("to edit") %>.</p>
-    <% } %>
 </div>
 <ul class="table-view core inputs info no-top">
   <li class="table-view-cell species">
-    <% if (obj.commonName) { %>
-      <span class="media-object pull-right descript"><%- obj.commonName %></span>
-    <% } %>
-    <span class="media-object pull-right descript"><i><%- obj.scientific_name %></i></span>
+    <span class="media-object pull-left icon icon-leaf"></span>
+    <span class="media-object pull-right descript"><%- obj.commonName %></span>
+    <%= t("Species") %>
   </li>
   <li class="table-view-cell">
     <span class="media-object pull-left icon icon-location"></span>
-    <span class="media-object pull-right descript"><%- obj.locationName %></span>
-    <span class="media-object pull-right descript"><%- obj.location %></span>
+    <span class="media-object pull-right descript"><%- obj.coords %></span>
     <%= t("Location") %>
   </li>
+  <% if (obj.country) { %>
+    <li class="table-view-cell">
+      <span class="media-object pull-left icon icon-address"></span>
+      <span class="media-object pull-right descript"><%- obj.country %></span>
+      <%= t("Country") %>
+    </li>
+  <% } %>
   <li class="table-view-cell">
+    <span class="media-object pull-left icon icon-low-vision"></span>
+    <span class="media-object pull-right descript"><%- obj.sensitive ? 'Yes' : 'No' %></span>
+    <%= t("Sensitive") %>
+  </li>
+<li class="table-view-cell">
     <span class="media-object pull-left icon icon-calendar"></span>
     <span class="media-object pull-right descript"><%- obj.date %></span>
     <%= t("Date") %>
   </li>
-  <% if (obj.number) { %>
-    <li class="table-view-cell">
-      <span class="media-object pull-left icon icon-number"></span>
-      <span class="media-object pull-right descript"><%- obj.number %></span>
-      <%= t("Number") %>
-    </li>
-  <% } %>
-  <% if (obj.stage) { %>
-    <li class="table-view-cell">
-      <span class="media-object pull-left icon icon-stage"></span>
-      <span class="media-object pull-right descript"><%- obj.stage %></span>
-      <%= t("Stage") %>
-    </li>
-  <% } %>
-  <% if (obj.comment) { %>
-    <li class="table-view-cell">
-      <span class="media-object pull-left icon icon-comment"></span>
-      <%= t("Comment") %>
-      <span class="comment descript"><%- obj.comment %></span>
-    </li>
-  <% } %>
-  <% if (obj.identifiers) { %>
+
   <li class="table-view-cell">
-    <span class="media-object pull-left icon icon-user-plus"></span>
-    <%= t("Identifiers") %>
-    <span class="comment descript"><%- obj.identifiers %></span>
+    <span class="media-object pull-left icon icon-bandage"></span>
+    <%= t("Injury") %>
+    <% if (obj.injurySymptoms) { %>
+      <span class="media-object pull-right descript"><%- obj.injurySymptoms %></span>
+    <% } %>
+    <% if (obj.injuryColour) { %>
+      <span class="media-object pull-right descript"><%- obj.injuryColour %></span>
+    <% } %>
+    <% if (obj.injuryLocation) { %>
+      <span class="media-object pull-right descript"><%- obj.injuryLocation %></span>
+    <% } %>
+    <% if (obj.injurySide) { %>
+      <span class="media-object pull-right descript"><%- obj.injurySide %></span>
+    <% } %>
+    <% if (obj.injuryAge) { %>
+      <span class="media-object pull-right descript"><%- obj.injuryAge %></span>
+    <% } %>
+    <% if (obj.injuryExtent) { %>
+      <span class="media-object pull-right descript"><%- obj.injuryExtent %></span>
+    <% } %>
+    <% if (obj.injuryEvidence) { %>
+      <span class="media-object pull-right descript"><%- obj['injuryEvidence'].join(', ') %></span>
+    <% } %>
+    <% if (obj.injuryEvidenceOther) { %>
+      <span class="media-object pull-right descript"><%- obj.injuryEvidenceOther %></span>
+    <% } %>
   </li>
-  <% } %>
-  <% if (obj.activity_title) { %>
+
   <li class="table-view-cell">
-    <span class="media-object pull-left icon icon-users"></span>
-    <span class="media-object pull-right descript"><%- obj.activity_title %></span>
-    <%= t("Activity") %>
+    <span class="media-object pull-left icon icon-cloud-sun"></span>
+    <%= t("Weather") %>
+    <% if (obj.weatherTemp) { %>
+      <span class="media-object pull-right descript"><%- obj.weatherTemp %></span>
+    <% } %>
+    <% if (obj.weatherRain) { %>
+      <span class="media-object pull-right descript"><%- obj.weatherRain %></span>
+    <% } %>
   </li>
-  <% } %>
+
+  <li class="table-view-cell">
+    <span class="media-object pull-left icon icon-pollution"></span>
+    <%= t("Pollution") %>
+    <% if (obj.pollutionConcentration) { %>
+      <span class="media-object pull-right descript"><%- obj.pollutionConcentration %></span>
+    <% } %>
+    <% if (obj.pollutionDuration) { %>
+      <span class="media-object pull-right descript"><%- obj.pollutionDuration %></span>
+    <% } %>
+  </li>
+
   <% if (obj.media.length) { %>
     <li id="img-array">
       <% obj.media.each((image) =>{ %>
