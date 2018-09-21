@@ -296,9 +296,9 @@ const survey = {
         question: 'On how many days was there rain?',
         type: 'radio',
         values: {
-          '0 days': 3577,
-          '1 to 3 days': 3578,
-          'over 3 days': 3576
+          '0 days': 3579,
+          '1 to 3 days': 3580,
+          'over 3 days': 3581
         }
       },
 
