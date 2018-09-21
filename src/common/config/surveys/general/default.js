@@ -283,10 +283,13 @@ const survey = {
         label: 'Temperature',
         question: 'What was the maximum daily temperature on average?',
         type: 'radio',
+        // Values cannot contain &deg; as it is converted to the degree symbol
+        // which then doesn't character match the html code when looking up the 
+        // value to send to the warehouse.
         values: {
-          'under 20&deg;C': 3576,
-          '20 to 30&deg;C': 3577,
-          'over 30&deg;C': 3578
+          'under 20C': 3576,
+          '20 to 30C': 3577,
+          'over 30C': 3578
         }
       },
 
