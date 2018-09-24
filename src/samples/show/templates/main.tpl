@@ -37,25 +37,25 @@
       <span class="media-object pull-right descript"><%- obj.injurySymptoms %></span>
     <% } %>
     <% if (obj.injuryColour) { %>
-      <span class="media-object pull-right descript"><%- obj.injuryColour %></span>
+      <span class="media-object pull-right descript long"><%- obj.injuryColour %></span>
     <% } %>
     <% if (obj.injuryLocation) { %>
-      <span class="media-object pull-right descript"><%- obj.injuryLocation %></span>
+      <span class="media-object pull-right descript long"><%- obj.injuryLocation %></span>
     <% } %>
     <% if (obj.injurySide) { %>
-      <span class="media-object pull-right descript"><%- obj.injurySide %></span>
+      <span class="media-object pull-right descript long"><%- obj.injurySide %></span>
     <% } %>
     <% if (obj.injuryAge) { %>
-      <span class="media-object pull-right descript"><%- obj.injuryAge %></span>
+      <span class="media-object pull-right descript long"><%- obj.injuryAge %></span>
     <% } %>
     <% if (obj.injuryExtent) { %>
-      <span class="media-object pull-right descript"><%- obj.injuryExtent %></span>
+      <span class="media-object pull-right descript long"><%- obj.injuryExtent %></span>
     <% } %>
     <% if (obj.injuryEvidence) { %>
-      <span class="media-object pull-right descript"><%- obj['injuryEvidence'].join(', ') %></span>
+      <span class="media-object pull-right descript long"><%- obj['injuryEvidence'].join(', ') %></span>
     <% } %>
     <% if (obj.injuryEvidenceOther) { %>
-      <span class="media-object pull-right descript"><%- obj.injuryEvidenceOther %></span>
+      <span class="media-object pull-right descript long"><%- obj.injuryEvidenceOther %></span>
     <% } %>
   </li>
 

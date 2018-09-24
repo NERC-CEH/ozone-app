@@ -7,32 +7,10 @@ import JST from 'JST';
 import DateHelp from 'helpers/date';
 import StringHelp from 'helpers/string';
 import { coreAttributes } from 'common/config/surveys/general';
-import AttrsView from './attrs_view';
 import './styles.scss';
 
 export default Marionette.View.extend({
   template: JST['samples/edit/main'],
-
-  regions: {
-    attrs: {
-      el: '#attrs',
-      replaceElement: true,
-    },
-  },
-
-  onRender() {
-    const sample = this.model.get('sample');
-    const activity = sample.get('activity');
-
-    const attrView = new AttrsView({
-      model: this.model,
-      activityExists: !!activity,
-    });
-    attrView.on('attr:update', (attr, value) =>
-      this.trigger('attr:update', attr, value)
-    );
-    this.showChildView('attrs', attrView);
-  },
 
   triggers: {
     'click a#species-button': 'taxon:update',
