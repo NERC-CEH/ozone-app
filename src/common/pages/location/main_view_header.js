@@ -16,7 +16,8 @@ const HeaderView = Marionette.View.extend({
   events: {
     'change #location-name': 'changeName',
     'change #location-gridref': 'changeGridRef',
-    'change #country': 'changeCountry',
+    'typeahead:select #country': 'selectCountry',
+    'typeahead:change #country': 'changeCountry',
     'keyup #location-gridref': 'keyupGridRef',
     'blur #location-name': 'blurInput',
     'blur #location-gridref': 'blurInput',
@@ -50,9 +51,10 @@ const HeaderView = Marionette.View.extend({
   },
 
   /**
-   * Attaches suggestions to the location name search.
+   * Attaches suggestions to the typeaheads whenever the 
+   * view is rendered (when the page is loaded or onLocationChange).
    */
-  onAttach() {
+  onRender() {
     const appModel = this.model.get('appModel');
 
     // Attaches suggestions to the location name search.
@@ -94,6 +96,14 @@ const HeaderView = Marionette.View.extend({
     this.triggerMethod('name:change', $(e.target).val());
   },
 
+  //Event handler fired when a suggestion is selected for the country input.
+  selectCountry(e, suggestion) {
+    // Pass event up to parent view.
+    this.triggerMethod('country:change', $(e.target).val());
+  },
+
+  // Event handler fired when country input loses focus and the value has  
+  // changed since it received focus.
   changeCountry(e) {
     // Pass event up to parent view.
     this.triggerMethod('country:change', $(e.target).val());
