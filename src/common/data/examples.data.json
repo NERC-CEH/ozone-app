@@ -411,6 +411,7 @@
       {
         "id": "open",
         "title": "Open heathland",
+        "noPhotos": true,
         "leaves": [
           {
             "title": "Tormentil",
@@ -469,6 +470,7 @@
       {
         "id": "bog",
         "title": "Bog or fen",
+        "noPhotos": true,
         "leaves": [
           {
             "title": "Common cottongrass",

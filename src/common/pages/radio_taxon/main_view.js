@@ -27,7 +27,7 @@ export default Marionette.View.extend({
 
   serializeData() {
     return {
-      branchTemplate: JST['common/branch'],
+      branchTemplate: JST['common/radio_taxon/branch'],
       leafTemplate: JST['common/radio_taxon/leaf'],
       data: examplesData,
     };
