@@ -52,6 +52,9 @@ const API = {
     });
 
     // Event handler for species button.
+    // The triggered event is picked up by the sample router and shows
+    // the common/pages/radio_taxon controller
+    // On completion updateTaxon is called.
     mainView.on('taxon:update', () => {
       radio.trigger('samples:edit:attr', sampleID, 'taxon', {
         onSuccess(taxon) {
@@ -60,9 +63,6 @@ const API = {
       });
     });
 
-    mainView.on('attr:update', (attr, value) =>
-      API.updateAttr(sample, attr, value)
-    );
     radio.trigger('app:main', mainView);
 
     // HEADER
@@ -261,29 +261,6 @@ const API = {
           },
         },
       ],
-    });
-  },
-
-  /**
-   * Update sample with new values
-   */
-  updateAttr(sample, attr, value) {
-    Log('Samples:Edit:Controller: saving.');
-
-    const occ = sample.getOccurrence();
-
-    const attrParts = attr.split(':');
-    const attrType = attrParts[0];
-    const attrName = attrParts[1];
-
-    const model = attrType === 'smp' ? sample : occ;
-
-    model.set(attrName, value);
-
-    // save it
-    return sample.save().catch(err => {
-      Log(err, 'e');
-      radio.trigger('app:dialog:error', err);
     });
   },
 
