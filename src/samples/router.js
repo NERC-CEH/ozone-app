@@ -90,7 +90,7 @@ radio.on('samples:edit:attr', (sampleID, attrID, options = {}) => {
       EditLocationController.show(sampleID);
       break;
     case 'taxon':
-      TaxonController.show(options);
+      TaxonController.show(sampleID, options);
       break;
     case 'activity':
       ActivitiesController.show(sampleID);

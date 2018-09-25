@@ -6,6 +6,7 @@ a:hover {
 ul.accordion {
   li.table-view-cell {
     padding: 11px;
+
     a[data-toggle='collapse'] {
       border-bottom: 1px solid $color-gray;
       background-color: $color-gray-light;
@@ -27,9 +28,11 @@ ul.accordion {
         content: '\e81c';
       }
     }
-    .item {
-      border: none;
-      .item-content {
+
+    &.leaf {
+      padding: 0;
+      .item {
+        border: none;
         padding: 0;
       }
     }

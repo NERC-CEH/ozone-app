@@ -3,7 +3,7 @@
     <h4><%= t("Examples of Ozone Injury") %></h4>
   </li>
   <% 
-    obj.data.forEach(function(branch) {
+    obj.data.branches.forEach(function(branch) {
       print(obj.branchTemplate({
         parent: "accordion",
         id: branch.id,

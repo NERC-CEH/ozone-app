@@ -2,20 +2,37 @@
  * Radio-Taxon controller.
  **************************************************************************** */
 import Backbone from 'backbone';
-import App from 'app';
 import radio from 'radio';
-import appModel from 'app_model';
+import savedSamples from 'saved_samples';
 import Log from 'helpers/log';
 import MainView from './main_view';
 import HeaderView from 'common/views/header_view';
 
 const API = {
-  show(options = {}) {
+  show(sampleID, options = {}) {
 
     Log(`Radio-Taxon:Controller: showing.`);
   
+    // wait till savedSamples is fully initialized
+    if (savedSamples.fetching) {
+      savedSamples.once('fetching:done', () => {
+        API.show.apply(this, [sampleID]);
+      });
+      return;
+    }
+
+    let sample = savedSamples.get(sampleID);
+
+    // Not found
+    if (!sample) {
+      radio.trigger('app:404:show', { replace: true });
+      return;
+    }
+  
     // MAIN
-    const mainView = new MainView();
+    const mainView = new MainView({
+      model: sample
+    });
     mainView.on('taxon:selected', options.onSuccess, this);
     radio.trigger('app:main',mainView);
 

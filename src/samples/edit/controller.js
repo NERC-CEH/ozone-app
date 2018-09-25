@@ -50,6 +50,8 @@ const API = {
     const mainView = new MainView({
       model: new Backbone.Model({ sample, appModel }),
     });
+
+    // Event handler for species button.
     mainView.on('taxon:update', () => {
       radio.trigger('samples:edit:attr', sampleID, 'taxon', {
         onSuccess(taxon) {
@@ -57,6 +59,7 @@ const API = {
         },
       });
     });
+
     mainView.on('attr:update', (attr, value) =>
       API.updateAttr(sample, attr, value)
     );

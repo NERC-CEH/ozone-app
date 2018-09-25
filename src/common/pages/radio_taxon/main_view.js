@@ -15,10 +15,12 @@ export default Marionette.View.extend({
 
   taxonSelected(event) {
     const $input = $(event.target);
+    const path = $input.attr('value');
 
     const species = {
       group: 3,
-      common_name: $input.attr('value'),
+      path: path,
+      common_name: path.substring(path.lastIndexOf('+') + 1),
       warehouse_id: $input.attr('id'),
       found_in_name: 'common_name'
     };
@@ -26,10 +28,13 @@ export default Marionette.View.extend({
   },
 
   serializeData() {
+    const taxon = this.model.getOccurrence().get('taxon');
+
     return {
       branchTemplate: JST['common/radio_taxon/branch'],
       leafTemplate: JST['common/radio_taxon/leaf'],
       data: examplesData,
+      selected: taxon && taxon.path
     };
   },
 
