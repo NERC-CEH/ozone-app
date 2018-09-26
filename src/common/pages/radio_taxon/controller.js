@@ -33,7 +33,11 @@ const API = {
     const mainView = new MainView({
       model: sample
     });
+
+    // Event handler following species selection.
+    // The callback function is updateTaxon in samples/edit/controller
     mainView.on('taxon:selected', options.onSuccess, this);
+    
     radio.trigger('app:main',mainView);
 
     // HEADER
@@ -41,13 +45,16 @@ const API = {
       model: new Backbone.Model({
         title: 'Species',
       }),
+      onExit() {
+        options.onSuccess(mainView.getSpecies());
+      },
     });
     radio.trigger('app:header', headerView);
 
     // FOOTER
     radio.trigger('app:footer:hide');
 
-  },
+  }
 };
 
 export { API as default };

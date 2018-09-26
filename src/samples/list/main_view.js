@@ -117,8 +117,8 @@ const SampleView = Marionette.View.extend({
       img = media.length && media.at(0).getURL();
     }
 
-    const taxon = specie[specie.found_in_name];
-
+    const taxon = (specie.otherSelected) ? specie['other-species'] : specie.common_name;
+  
     const syncStatus = this.model.getSyncStatus();
 
     const locationPrint = sample.printLocation();

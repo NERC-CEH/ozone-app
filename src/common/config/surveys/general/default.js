@@ -343,6 +343,13 @@ const survey = {
         },
       },
 
+      'other-species': {
+        id: 256,
+        label: 'Species',
+        question: 'What was the species name?',
+        type: 'text',
+      },
+
       'injury-symptoms': {
         id: 413,
         label: 'Symptoms',

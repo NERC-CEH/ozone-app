@@ -1,0 +1,37 @@
+#species-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  #other-species {
+    flex: none;
+    margin: 4px 0;
+    border: 1px black double;
+    padding: 2px 2px 0 2px;
+    .info-message {
+      margin: 0;
+    }
+  }
+
+  #species {
+    overflow: auto;
+    position:relative;
+    #overlay {
+      background-color: gray;
+      opacity: 70%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .grey {
+    background-color: gray;
+  }
+
+}
+

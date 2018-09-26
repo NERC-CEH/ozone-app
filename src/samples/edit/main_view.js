@@ -51,8 +51,7 @@ export default Marionette.View.extend({
     const appModel = this.model.get('appModel');
 
     // taxon
-    const scientificName = specie.scientific_name;
-    const commonName = specie.common_name;
+    const commonName = (specie.otherSelected) ? specie['other-species'] : specie.common_name;
 
     const locationPrint = sample.printLocation();
     const location = sample.get('location') || {};
@@ -71,7 +70,6 @@ export default Marionette.View.extend({
 
     return {
       id: sample.cid,
-      scientificName: StringHelp.limit(scientificName),
       commonName: StringHelp.limit(commonName),
       isLocating: sample.isGPSRunning(),
       isSynchronising: sample.getSyncStatus() === Indicia.SYNCHRONISING,

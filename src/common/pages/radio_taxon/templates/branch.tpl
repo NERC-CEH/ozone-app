@@ -1,5 +1,7 @@
-<li id="<%= obj.id %>-heading" class="table-view-cell panel branch">
-    <a <%= obj.collapsed ? 'class="collapsed"' : '' %> data-toggle="collapse" data-parent="#<%= obj.parent %>"
+<li id="<%= obj.id %>-heading" 
+  class="table-view-cell panel branch <%= (obj.otherSelected) ? 'grey' : '' %>">
+    <a class="<%= obj.collapsed ? 'collapsed' : '' %> <%= (obj.otherSelected) ? 'grey' : '' %>" 
+        data-toggle="collapse" data-parent="#<%= obj.parent %>"
         href="#<%= obj.id %>" aria-expanded="false" aria-controls="<%= obj.id %>" >
       <span class="icon icon-collapse pull-left"></span>
       <%= t(obj.title) %>
@@ -14,6 +16,7 @@
               path: obj.path + '+' + branch.id,
               selected: obj.selected,
               collapsed: !(obj.selected && obj.selected.startsWith(obj.path + '+' + branch.id)),
+              otherSelected: obj.otherSelected,
               branchTemplate: obj.branchTemplate,
               leafTemplate: obj.leafTemplate,
               id: branch.id,
@@ -27,6 +30,7 @@
             print(obj.leafTemplate({
               path: obj.path + '+' + leaf.title,
               selected: obj.selected,
+              otherSelected: obj.otherSelected,
               id: leaf.id,
               title: leaf.title,
               subtitle: leaf.subtitle,

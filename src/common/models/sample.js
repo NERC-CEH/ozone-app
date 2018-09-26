@@ -266,6 +266,9 @@ let Sample = Indicia.Sample.extend({
         }
       }
 
+      // Set the other-species occurrence attribute.
+      occ.set('other-species', taxon['other-species']);
+      // Store everything else about the taxon.
       occ.set('taxon', taxon);
       return resolve(this);
     });
