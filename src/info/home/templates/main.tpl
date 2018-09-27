@@ -49,7 +49,7 @@
   <li class="table-view-cell">
     <a href="#info" class="navigate-right">
       <span class="media-object pull-left icon icon-settings"></span>
-      App configuration
+      App information
     </a>
   </li>
 </ul>

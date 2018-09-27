@@ -24,7 +24,7 @@
 <li class="table-view-cell">
   <a href="#settings" class="navigate-right">
     <span class="media-object pull-left icon icon-settings"></span>
-    <%= t("App") %>
+    <%= t("Settings") %>
   </a>
 </li>
 
@@ -37,7 +37,7 @@
 <li class="table-view-cell">
   <a href="#info/privacy" class="navigate-right">
     <span class="media-object pull-left icon icon-lock-closed"></span>
-    <%= t("Privacy Policy") %>
+    <%= t("Privacy") %>
   </a>
 </li>
 <li class="table-view-cell">
