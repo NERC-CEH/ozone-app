@@ -20,22 +20,7 @@
   </div>
 </li>
 
-<li class="table-view-divider"><%= t("Location") %></li>
-<li class="table-view-cell">
-  <a href="#settings/locations" class="navigate-right">
-    <span class="media-object pull-left icon icon-location"></span>
-    <%= t("Manage Saved") %>
-  </a>
-</li>
-
 <li class="table-view-divider"><%= t("Application") %></li>
-<li class="table-view-cell">
-  <%= t("Experimental Features") %>
-  <span class="media-object pull-left icon icon-fire"></span>
-  <div id="use-experiments-btn" data-setting="useExperiments" class="toggle no-yes <%- obj.useExperiments ? 'active' : '' %>">
-    <div class="toggle-handle"></div>
-  </div>
-</li>
 <li class="table-view-cell">
   <a id="app-reset-btn">
     <span class="media-object pull-left icon icon-undo"></span>
