@@ -18,7 +18,10 @@ import symptomsData from '../common/data/symptoms.data.json'
 import examplesData from '../common/data/examples.data.json'
 import otherCausesData from '../common/data/other_causes.data.json'
 import './help/swipe_record.png';
-import './credits/sponsor_logo.png';
+import './credits/ceh.png';
+import './credits/lrtap.jpg';
+import './credits/wge.jpg';
+import './credits/styles.scss';
 
 App.info = {};
 
