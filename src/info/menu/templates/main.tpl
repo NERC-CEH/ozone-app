@@ -5,12 +5,6 @@
     <%= t("Logout") %>: <%- obj.firstname %> <%- obj.secondname %>
   </a>
 </li>
-<li class="table-view-cell">
-  <a  href="#user/statistics"  class="navigate-right">
-    <span class="media-object pull-left icon icon-statistics"></span>
-    <%= t("Statistics") %>
-  </a>
-</li>
 <% } else { %>
 <li class="table-view-cell">
   <a href="#user/login" class="navigate-right">
