@@ -1,63 +1,65 @@
-[
-  {
-    "id": "interveinal",
-    "title": "Interveinal leaf stippling",
-    "leaves": [
-      {
-        "text": "Ozone damage becomes visible on the leaf surface as small pale yellow, cream or bronze pin-head sized blotches between leaf veins. In severe cases, this spotting (known as “stippling”) can join together to cover large areas of the leaf surface."
-      },
-      {
-        "title": "Cream spots",
-        "subtitle": "in white clover (<em>Trifolium repens</em>)",
-        "photo": "cream-spots-clover"
-      },
+{
+  "branches": [
     {
-        "title": "Bronze spots",
-        "subtitle": "in hornbeam (<em>Carpinus betulus</em>)",
-        "photo": "bronze-spots-hornbeam"
-      }
-    ]
-  },
-  {
-    "id": "surface",
-    "title": "Damage on upper leaf surface",
-    "leaves": [
+      "id": "interveinal",
+      "title": "Interveinal leaf stippling",
+      "leaves": [
+        {
+          "text": "Ozone damage becomes visible on the leaf surface as small pale yellow, cream or bronze pin-head sized blotches between leaf veins. In severe cases, this spotting (known as “stippling”) can join together to cover large areas of the leaf surface."
+        },
+        {
+          "title": "Cream spots",
+          "subtitle": "in white clover (<em>Trifolium repens</em>)",
+          "photo": "cream-spots-clover"
+        },
       {
-        "text": "Leaf spots (stipples) appear first on the upper surface and as damage worsens can be found on both sides of the leaf."
-      },
-      {
-        "title": "Upper surface",
-        "subtitle": "in wych elm (<em>Ulmus glabra</em>)",
-        "photo": "upper-surface-elm"
-      },
+          "title": "Bronze spots",
+          "subtitle": "in hornbeam (<em>Carpinus betulus</em>)",
+          "photo": "bronze-spots-hornbeam"
+        }
+      ]
+    },
     {
-        "title": "Lower surface",
-        "subtitle": "in wych elm (<em>Ulmus glabra</em>)",
-        "photo": "lower-surface-elm"
-      }
-    ]
-  },
-  {
-    "id": "age",
-    "title": "Leaf age",
-    "leaves": [
+      "id": "surface",
+      "title": "Damage on upper leaf surface",
+      "leaves": [
+        {
+          "text": "Leaf spots (stipples) appear first on the upper surface and as damage worsens can be found on both sides of the leaf."
+        },
+        {
+          "title": "Upper surface",
+          "subtitle": "in wych elm (<em>Ulmus glabra</em>)",
+          "photo": "upper-surface-elm"
+        },
       {
-        "text": "Older leaves (towards the base of stems and branches) are usually more affected than younger leaves, as they have been exposed to ozone for longer periods."
-      },
-      {
-        "title": "Older leaves",
-        "subtitle": "in silver birch (<em>Betula pendula</em>)",
-        "photo": "older-leaves-birch"
-      }
-    ]
-  },
-  {
-    "id": "yellowing",
-    "title": "Leaf yellowing",
-    "leaves": [
-      {
-        "text": "The development of spots on the leaf due to ozone damage can be followed by leaf chlorosis (yellowing or paling of green plant tissue), particularly on older leaves. However, leaf yellowing can also be caused by many other factors, for example, mineral deficiencies and natural leaf aging. Care must be taken if recording ozone damage with chlorosis as the main symptom, for example, is it towards the end of the growing season, therefore leaves are aging naturally?"
-      }
-    ]
-  }
-]
+          "title": "Lower surface",
+          "subtitle": "in wych elm (<em>Ulmus glabra</em>)",
+          "photo": "lower-surface-elm"
+        }
+      ]
+    },
+    {
+      "id": "age",
+      "title": "Leaf age",
+      "leaves": [
+        {
+          "text": "Older leaves (towards the base of stems and branches) are usually more affected than younger leaves, as they have been exposed to ozone for longer periods."
+        },
+        {
+          "title": "Older leaves",
+          "subtitle": "in silver birch (<em>Betula pendula</em>)",
+          "photo": "older-leaves-birch"
+        }
+      ]
+    },
+    {
+      "id": "yellowing",
+      "title": "Leaf yellowing",
+      "leaves": [
+        {
+          "text": "The development of spots on the leaf due to ozone damage can be followed by leaf chlorosis (yellowing or paling of green plant tissue), particularly on older leaves. However, leaf yellowing can also be caused by many other factors, for example, mineral deficiencies and natural leaf aging. Care must be taken if recording ozone damage with chlorosis as the main symptom, for example, is it towards the end of the growing season, therefore leaves are aging naturally?"
+        }
+      ]
+    }
+  ]
+}

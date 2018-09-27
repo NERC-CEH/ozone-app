@@ -77,10 +77,14 @@ const Router = Marionette.AppRouter.extend({
         title: 'Symptoms',
         App,
         route: 'info/symptoms/main',
+        template: JST['common/accordion'],
         model: new Backbone.Model({
+          title: 'Symptoms of ozone damage',
+          subtitle: 'Ozone pollution enters leaves through small pores on the leaf surface and causes damage to leaf cells.',
+          path: 'symptoms',
           data: symptomsData,
-          branchTemplate: JST['common/branch'],
-          leafTemplate: JST['common/leaf'],
+          branchTemplate: JST['common/accordion_branch'],
+          leafTemplate: JST['common/accordion_leaf'],
           selected: appModel.get('infopath')
         }),
       });
@@ -90,10 +94,13 @@ const Router = Marionette.AppRouter.extend({
         title: 'Examples',
         App,
         route: 'info/examples/main',
+        template: JST['common/accordion'],
         model: new Backbone.Model({
+          title: 'Examples of Ozone Injury',
+          path: 'examples',
           data: examplesData,
-          branchTemplate: JST['common/branch'],
-          leafTemplate: JST['common/leaf'],
+          branchTemplate: JST['common/accordion_branch'],
+          leafTemplate: JST['common/accordion_leaf'],
           selected: appModel.get('infopath')
         }),
       });
@@ -103,10 +110,14 @@ const Router = Marionette.AppRouter.extend({
         title: 'Other Causes',
         App,
         route: 'info/other-causes/main',
+        template: JST['common/accordion'],
         model: new Backbone.Model({
+          title: 'Other causes of leaf damage',
+          subtitle: 'There are other possible causes of leaf damage that may be mistaken for ozone injury, which should not be included in this survey.',
+          path: 'other-causes',
           data: otherCausesData,
-          branchTemplate: JST['common/branch'],
-          leafTemplate: JST['common/leaf'],
+          branchTemplate: JST['common/accordion_branch'],
+          leafTemplate: JST['common/accordion_leaf'],
           selected: appModel.get('infopath')
         }),
       });

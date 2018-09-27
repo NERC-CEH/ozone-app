@@ -1,25 +1,26 @@
 <% if (!obj.noPhotos) { %>
   <li id="<%= obj.id %>-heading" class="table-view-cell panel">
-      <a class="collapsed" data-toggle="collapse" data-parent="#<%= obj.parent %>"
+      <a class="<%= obj.collapsed ? 'collapsed' : '' %>" data-toggle="collapse" data-parent="#<%= obj.parent %>"
           href="#<%= obj.id %>" aria-expanded="false" aria-controls="<%= obj.id %>">
         <span class="icon icon-collapse pull-left"></span>
         <%= t(obj.title) %>
       </a>
-      <ul id="<%= obj.id %>" class="table-view buttons collapse <%= (obj.selected && obj.selected.startsWith(obj.path + '+' + obj.id)) ? 'in' : '' %>" 
+      <ul id="<%= obj.id %>" class="table-view buttons collapse <%= (obj.collapsed) ? '' : 'in' %>" 
         aria-labelledby="<%= obj.id %>-heading" aria-expanded="false">
         <%
           if (obj.data.branches) {
             obj.data.branches.forEach(function(branch) {
               print(obj.branchTemplate({
                 parent: obj.id,
-                id: branch.id,
-                title: branch.title,
-                data: branch,
+                path: obj.path + '+' + branch.id,
+                selected: obj.selected,
+                collapsed: !(obj.selected && obj.selected.startsWith(obj.path + '+' + branch.id)),
+                noPhotos: branch.noPhotos,
                 branchTemplate: obj.branchTemplate,
                 leafTemplate: obj.leafTemplate,
-                path: obj.path + '+' + obj.id,
-                selected: obj.selected,
-                noPhotos: branch.noPhotos
+                id: branch.id,
+                title: branch.title,
+                data: branch
               }));
             });
           }

@@ -20,6 +20,10 @@ const API = {
 
     // FOOTER
     radio.trigger('app:footer:hide');
+
+    // Clear the history of where we have navigated in the accordion views
+    // for symptoms, examples, and other-causes.
+    appModel.set('infopath', '');
   },
 
   // Add new record
