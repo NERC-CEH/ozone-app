@@ -29,6 +29,11 @@ ul.accordion {
       }
     }
 
+    /* For help page */
+    p {
+      margin-top: 21px;
+    }
+    
     &.leaf {
       padding: 0;
       .item {
