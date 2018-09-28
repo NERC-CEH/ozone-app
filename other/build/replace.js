@@ -114,7 +114,15 @@ module.exports = grunt => ({
         {
           from: /\{ANDROID_BUNDLE_VER\}/g,
           to() {
-            let version = pkg.version.replace(/\./g, '') + pkg.build;
+            /* For a version a.b.c and build d, create a number
+            in the form aabbccdd. E.g 1.3.7 (11) becomes 01030711.
+            This ensures the version number always increases with
+            successive versions provided no version part exceeds 99. */
+            let versionArray = pkg.version.split('.');
+            versionArray.push(pkg.build);
+            versionArray = versionArray.map(v => v.padStart(2, '0'));
+            let version;
+            versionArray.forEach(v => version += v);
             if (!grunt.option('oldversion')) {
               version += 8;
             }
