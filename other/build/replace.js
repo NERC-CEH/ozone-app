@@ -121,7 +121,7 @@ module.exports = grunt => ({
             let versionArray = pkg.version.split('.');
             versionArray.push(pkg.build);
             versionArray = versionArray.map(v => v.padStart(2, '0'));
-            let version;
+            let version = '';
             versionArray.forEach(v => version += v);
             if (!grunt.option('oldversion')) {
               version += 8;
