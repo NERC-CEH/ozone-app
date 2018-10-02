@@ -118,8 +118,8 @@
         <splash src="../../other/cordova/images/ios/splash/land-2732x2048.jpg" width="2732" height="2048"/>
 
         <splash src="../../other/cordova/images/ios/splash/port-320x480.jpg" width="320" height="480"/>
-        <splash src="../../other/cordova/images/ios/splash/port-640x980.jpg" width="640" height="960"/>
-        <splash src="../../other/cordova/images/ios/splash/port-768x1024.png" width="768" height="1024"/>
+        <splash src="../../other/cordova/images/ios/splash/port-640x960.jpg" width="640" height="960"/>
+        <splash src="../../other/cordova/images/ios/splash/port-768x1024.jpg" width="768" height="1024"/>
         <splash src="../../other/cordova/images/ios/splash/port-640x1136.jpg" width="640" height="1136"/>
         <splash src="../../other/cordova/images/ios/splash/port-750x1334.jpg" width="750" height="1334"/>
         <splash src="../../other/cordova/images/ios/splash/port-828x1792.jpg" width="828" height="1792"/>
