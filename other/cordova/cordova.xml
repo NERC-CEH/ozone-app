@@ -107,27 +107,30 @@
         <icon src="../../other/cordova/images/ios/icon/icon-1024.png" height="1024" width="1024" />
 
         <!-- images are determined by width and height. The following are supported -->
-        <splash src="../../other/cordova/images/ios/splash/land-1024x768.jpg" width="1024" height="768"/>
-        <splash src="../../other/cordova/images/ios/splash/land-1334x750.jpg" width="1334" height="750"/>
-        <splash src="../../other/cordova/images/ios/splash/land-1792x828.jpg" width="1792" height="828"/>
-        <splash src="../../other/cordova/images/ios/splash/land-2048x1536.jpg" width="2048" height="1536"/>
-        <splash src="../../other/cordova/images/ios/splash/land-2208x1242.jpg" width="2208" height="1242"/>
-        <splash src="../../other/cordova/images/ios/splash/land-2224x1668.jpg" width="2224" height="1668"/>
-        <splash src="../../other/cordova/images/ios/splash/land-2436x1125.jpg" width="2436" height="1125"/>
-        <splash src="../../other/cordova/images/ios/splash/land-2048x1536.jpg" width="2688" height="1242"/>
-        <splash src="../../other/cordova/images/ios/splash/land-2732x2048.jpg" width="2732" height="2048"/>
+        <splash src="../../other/cordova/images/ios/splash/land-1024x768.png" width="1024" height="768"/>
+        <splash src="../../other/cordova/images/ios/splash/land-1136x640.png" width="1136" height="640"/>
+        <splash src="../../other/cordova/images/ios/splash/land-1334x750.png" width="1334" height="750"/>
+        <splash src="../../other/cordova/images/ios/splash/land-1792x828.png" width="1792" height="828"/>
+        <splash src="../../other/cordova/images/ios/splash/land-2048x1536.png" width="2048" height="1536"/>
+        <splash src="../../other/cordova/images/ios/splash/land-2208x1242.png" width="2208" height="1242"/>
+        <splash src="../../other/cordova/images/ios/splash/land-2224x1668.png" width="2224" height="1668"/>
+        <splash src="../../other/cordova/images/ios/splash/land-2436x1125.png" width="2436" height="1125"/>
+        <splash src="../../other/cordova/images/ios/splash/land-2048x1536.png" width="2688" height="1242"/>
+        <splash src="../../other/cordova/images/ios/splash/land-2732x2048.png" width="2732" height="2048"/>
 
-        <splash src="../../other/cordova/images/ios/splash/port-320x480.jpg" width="320" height="480"/>
-        <splash src="../../other/cordova/images/ios/splash/port-640x960.jpg" width="640" height="960"/>
-        <splash src="../../other/cordova/images/ios/splash/port-768x1024.jpg" width="768" height="1024"/>
-        <splash src="../../other/cordova/images/ios/splash/port-640x1136.jpg" width="640" height="1136"/>
-        <splash src="../../other/cordova/images/ios/splash/port-750x1334.jpg" width="750" height="1334"/>
-        <splash src="../../other/cordova/images/ios/splash/port-828x1792.jpg" width="828" height="1792"/>
-        <splash src="../../other/cordova/images/ios/splash/port-1125x2436.jpg" width="1125" height="2436"/>
-        <splash src="../../other/cordova/images/ios/splash/port-1242x2208.jpg" width="1242" height="2208"/>
-        <splash src="../../other/cordova/images/ios/splash/port-1536x2048.jpg" width="1536" height="2048"/>
-        <splash src="../../other/cordova/images/ios/splash/port-1668x2224.jpg" width="1668" height="2224"/>
-        <splash src="../../other/cordova/images/ios/splash/port-2048x2732.jpg" width="2048" height="2732"/>
+        <splash src="../../other/cordova/images/ios/splash/port-320x480.png" width="320" height="480"/>
+        <splash src="../../other/cordova/images/ios/splash/port-320x568.png" width="320" height="568"/>
+        <splash src="../../other/cordova/images/ios/splash/port-640x960.png" width="640" height="960"/>
+        <splash src="../../other/cordova/images/ios/splash/port-640x1136.png" width="640" height="1136"/>
+        <splash src="../../other/cordova/images/ios/splash/port-750x1334.png" width="750" height="1334"/>
+        <splash src="../../other/cordova/images/ios/splash/port-768x1024.png" width="768" height="1024"/>
+        <splash src="../../other/cordova/images/ios/splash/port-828x1792.png" width="828" height="1792"/>
+        <splash src="../../other/cordova/images/ios/splash/port-1125x2436.png" width="1125" height="2436"/>
+        <splash src="../../other/cordova/images/ios/splash/port-1242x2208.png" width="1242" height="2208"/>
+        <splash src="../../other/cordova/images/ios/splash/port-1242x2688.png" width="1242" height="2688"/>
+        <splash src="../../other/cordova/images/ios/splash/port-1536x2048.png" width="1536" height="2048"/>
+        <splash src="../../other/cordova/images/ios/splash/port-1668x2224.png" width="1668" height="2224"/>
+        <splash src="../../other/cordova/images/ios/splash/port-2048x2732.png" width="2048" height="2732"/>
     </platform>
     <platform name="android">
 <!--        <icon src="../../other/cordova/images/android/icon/drawable-ldpi-icon.png" density="ldpi" />
