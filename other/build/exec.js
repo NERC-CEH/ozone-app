@@ -35,7 +35,8 @@ module.exports = function(grunt) {
       stdout: true,
     },
     /**
-     * $ANDROID_KEYSTORE must be set up to point to your android certificates keystore
+     * $KEYSTORE must be set up to point to your android certificates keystore
+     * i.e. export KEYSTORE=/path/to/file at the command prompt or set in ~/.bash_profile
      */
     cordova_android_build: {
       command() {
