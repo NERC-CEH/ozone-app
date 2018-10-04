@@ -93,7 +93,7 @@ module.exports = grunt => ({
       replacements: [
         {
           from: /\{ID\}/g, // string replacement
-          to: () => grunt.option('android') ? 'uk.ac.ceh.irecord' : pkg.id,
+          to: () => pkg.id,
         },
         {
           from: /\{APP_VER\}/g, // string replacement
