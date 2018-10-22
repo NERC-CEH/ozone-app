@@ -1,19 +1,28 @@
 <ul class="table-view">
   <li>
+    <p>Ground-level ozone pollution, formed primarily from precursor gases emitted 
+      by vehicle exhausts and industrial fumes, can damage vegetation. Negative 
+      effects include visible injury on leaves, decreased growth and reductions 
+      in quality and quantity of crop yield. As ozone pollution does not result 
+      in any residue on the leaf surface, the most easily detectable evidence of 
+      damage to vegetation is visible injury.
+    </p>
     <p>The Ozone Injury App is an application that enables you to get involved in
       environmental monitoring. You can contribute your sightings with photos,
       GPS acquired coordinates, descriptions and other information, thus providing
       scientists with important new information that contributes to pollution control,
-      nature conservation, planning, research and education.
+      conservation, planning, research and education.
     </p>
   </li>
   <li>
     <p><strong>Who can use the app?</strong></p>
-    <p>We encourage everyone to get involved with recording ozone injury as it is
-      very easy and quick to submit useful records without specialist knowledge.
-      It doesn't matter whether you are an amateur enthusiast or a qualified
-      biologist, The Ozone Injury App is for anyone who wants to help monitor and 
-      manage pollution due to ozone.
+    <p>We welcome everyone to try using the app but particularly encourage people 
+      who have experience of working regularly with plants, for example gardeners, 
+      farmers, or surveyors. It doesn't matter whether you are an amateur enthusiast 
+      or a qualified biologist, but it is useful if you are familiar with different 
+      causes of leaf damage, including insect damage. The app is easy to use and it's 
+      very quick to submit useful records. App users will be directly contributing 
+      to the monitoring of ozone damage to vegetation. 
     </p>
   </li>
   <li>
