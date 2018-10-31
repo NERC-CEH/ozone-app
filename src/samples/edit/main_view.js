@@ -68,15 +68,51 @@ export default Marionette.View.extend({
     const activity = sample.get('activity');
     const activityTitle = activity ? activity.title : null;
 
+    // Count answers in subsections and set a status class
+    let locationAnswers = 0;
+    let locationStatus = 'warn';
+    locationAnswers += locationPrint ? 1 : 0;
+    locationAnswers += sample.get('country') ? 1 : 0;
+    if (locationAnswers == 2) {
+      locationStatus = 'ok';
+    }
+    else if (!locationPrint && !sample.isGPSRunning()) {
+      // We don't have a location and we are not waiting on GPS either.
+      locationStatus = 'error';
+    }
+    let injuryAnswers = 0;
+    injuryAnswers += occ.get('injury-symptoms') ? 1 : 0;
+    injuryAnswers += occ.get('injury-colour') ? 1 : 0;
+    injuryAnswers += occ.get('injury-location') ? 1 : 0;
+    injuryAnswers += occ.get('injury-side') ? 1 : 0;
+    injuryAnswers += occ.get('injury-age') ? 1 : 0;
+    injuryAnswers += occ.get('injury-extent') ? 1 : 0;
+    injuryAnswers += occ.get('injury-evidence') ? 1 : 0;
+    let injuryStatus = (injuryAnswers == 7) ? 'ok' : 'warn';
+    let weatherAnswers = 0;
+    weatherAnswers += sample.get('weather-temp') ? 1 : 0;
+    weatherAnswers += sample.get('weather-rain') ? 1 : 0;
+    let weatherStatus = (weatherAnswers == 2) ? 'ok' : 'warn';
+    let pollutionAnswers = 0;
+    pollutionAnswers += sample.get('pollution-concentration') ? 1 : 0;
+    pollutionAnswers += sample.get('pollution-duration') ? 1 : 0;
+    let pollutionStatus = (pollutionAnswers == 2) ? 'ok' : 'warn';
+
     return {
       id: sample.cid,
       commonName: StringHelp.limit(commonName),
-      isLocating: sample.isGPSRunning(),
       isSynchronising: sample.getSyncStatus() === Indicia.SYNCHRONISING,
-      'smp:location': StringHelp.limit(locationPrint),
       'smp:date': DateHelp.print(sample.get('date'), true),
       'smp:activity': activityTitle,
       locks: attrLocks,
+      locationAnswers,
+      locationStatus,
+      injuryAnswers,
+      injuryStatus,
+      weatherAnswers,
+      weatherStatus,
+      pollutionAnswers,
+      pollutionStatus
     };
   },
 });

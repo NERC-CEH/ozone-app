@@ -11,17 +11,7 @@
     <a href="#samples/<%- obj.id %>/edit/location" id="location-button"
        class="<%- obj.locks['smp:location'] || obj.locks['smp:locationName'] ? '' : 'navigate-right' %>">
       <span class="media-object pull-left icon icon-location"></span>
-
-      <% if (obj['smp:location']) { %>
-      <span class="location media-object pull-right descript <%- obj.locks['smp:location'] ? 'lock' : '' %>"><%- obj['smp:location'] %></span>
-      <% } else { %>
-      <% if (obj.isLocating) { %>
-      <span class="media-object pull-right descript warn"><%= t("Locating") %>...</span>
-      <% } else { %>
-      <span class="media-object pull-right descript error"><%= t("Location missing") %></span>
-      <% } %>
-      <% } %>
-
+      <span class="badge <%= obj.locationStatus %>"><%= obj.locationAnswers %>/2</span>
      <%= t("Location") %>
     </a>
   </li>
@@ -39,7 +29,7 @@
     <a href="#samples/<%- obj.id %>/edit/injury" id="injury-button" 
       class="navigate-right">
       <span class="media-object pull-left icon icon-bandage"></span>
-      <span class="media-object pull-right descript"><%- obj.soil %></span>
+      <span class="badge <%= obj.injuryStatus %>"><%= obj.injuryAnswers %>/7</span>
       <%= t("Injury") %>
     </a>
   </li>
@@ -48,7 +38,7 @@
     <a href="#samples/<%- obj.id %>/edit/weather" id="weather-button" 
       class="navigate-right">
       <span class="media-object pull-left icon icon-cloud-sun"></span>
-      <span class="media-object pull-right descript"><%- obj.soil %></span>
+      <span class="badge <%= obj.weatherStatus %>"><%= obj.weatherAnswers %>/2</span>
       <%= t("Weather") %>
     </a>
   </li>
@@ -57,7 +47,7 @@
     <a href="#samples/<%- obj.id %>/edit/pollution" id="pollution-button" 
       class="navigate-right">
       <span class="media-object pull-left icon icon-pollution"></span>
-      <span class="media-object pull-right descript"><%- obj.soil %></span>
+      <span class="badge <%= obj.pollutionStatus %>"><%= obj.pollutionAnswers %>/2</span>
       <%= t("Pollution") %>
     </a>
   </li>
