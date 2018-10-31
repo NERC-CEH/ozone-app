@@ -7,7 +7,7 @@
     <p>
       If you choose to create a user account for the app, this will be created
       on the
-      <a href="http://www.brc.ac.uk/icpveg" rel="external">
+      <a href="https://icpvegetation.ceh.ac.uk/" rel="external">
         ICP Vegetation website system
       </a>. This enables you to log in and see your records and those submitted
       by other people. Your name, as specified when you create
