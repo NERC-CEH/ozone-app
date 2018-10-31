@@ -105,6 +105,21 @@ radio.on('sample:saved', (options) => {
   // the recording form was accessed from the home page or the list page.
   App.navigate('samples', options);
   ListController.show();
+  radio.trigger('app:dialog', {
+    title: 'Record submitted',
+    body:
+      'Your record has been successfully submitted to the database. ' +
+      'Thanks for your help!',
+    buttons: [
+      {
+        id: 'ok',
+        title: 'OK',
+        class: 'btn-positive',
+        onClick: App.regions.getRegion('dialog').hide,
+      },
+    ],
+  });
+
 });
 
 function syncSamples() {
