@@ -9,7 +9,7 @@
     <p id="c1" class="collapse" aria-labelledby="headingOne" aria-expanded="false">
       <%= t("Please press the Record Ozone Injury") %> 
       <span class="icon icon-plus"></span> 
-      <%= t("button on the home page. This will bring you to the recording form where you should fill in the details of the sighting.") %>
+      <%= t("button on the home page. This will bring you to the recording form where you should fill in the details of the sighting. Tap the camera icon at the bottom of the screen to add a photo. Please add two photos, a close up of the injury and another of the plant in its surroundings.") %>
       <br><br>
       <%= t("When finished, set for submission by pressing the paper plane") %>
       <span class="icon icon-send"></span> 
