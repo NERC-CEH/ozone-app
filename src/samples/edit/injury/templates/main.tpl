@@ -64,4 +64,8 @@
       </a>
     </li>
   <% } %>
-</ul>
+  <li class="table-view-cell">
+      &nbsp;
+      <button class="btn btn-positive" data-rel="back">Done</button>
+    </li>
+  </ul>

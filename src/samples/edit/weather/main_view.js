@@ -8,6 +8,10 @@ import JST from 'JST';
 export default Marionette.View.extend({
   template: JST['samples/edit/weather/main'],
 
+  events: {
+    'click button[data-rel="back"]': () => window.history.back()
+  },
+
   serializeData() {
     const sample = this.model.get('sample');
     const appModel = this.model.get('appModel');

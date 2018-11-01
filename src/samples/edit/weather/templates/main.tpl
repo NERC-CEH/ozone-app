@@ -19,4 +19,8 @@
      <span class="media-object pull-right answer"><%- obj['weather-rain'] %></span>
    </a>
  </li>
+ <li class="table-view-cell">
+    &nbsp;
+    <button class="btn btn-positive" data-rel="back">Done</button>
+  </li>
 </ul>

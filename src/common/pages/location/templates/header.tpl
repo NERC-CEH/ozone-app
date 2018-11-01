@@ -46,5 +46,9 @@
       </div>  
     </div>
 
+    <div class="input-row" id="done-row">
+      <button class="btn btn-positive" data-rel="back">Done</button>
+    </div>
+
   </div>
 </div>

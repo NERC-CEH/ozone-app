@@ -22,7 +22,8 @@ const HeaderView = Marionette.View.extend({
     'blur #location-name': 'blurInput',
     'blur #location-gridref': 'blurInput',
     'toggle #sensitive-btn': 'toggleSensitive',
-    'click #sensitive-btn': 'toggleSensitive'
+    'click #sensitive-btn': 'toggleSensitive',
+    'click button[data-rel="back"]': () => window.history.back()
   },
 
   initialize() {

@@ -10,6 +10,10 @@ import StringHelp from 'helpers/string';
 export default Marionette.View.extend({
   template: JST['samples/edit/injury/main'],
 
+  events: {
+    'click button[data-rel="back"]': () => window.history.back()
+  },
+
   serializeData() {
     const sample = this.model.get('sample');
     const occ = sample.getOccurrence();
