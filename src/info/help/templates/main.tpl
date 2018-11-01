@@ -46,7 +46,7 @@
       <%= t("Sync. with the database") %>
     </a>
     <p id="c3" class="collapse" aria-labelledby="headingTwo" aria-expanded="false">
-      <%= t("t is possible to complete a record while offline. If you try to send a record while offline, you will receive a message. If you click OK, the completed record will appear in your Record List on the home page. By default a record is in") %> 
+      <%= t("It is possible to complete a record while offline. If you try to send a record while offline, you will receive a message. If you click OK, the completed record will appear in your Record List on the home page. By default a record is in") %> 
       <i><%= t("draft") %></i> 
       <%= t("mode until it is set for submission. While it is in") %> 
       <i><%= t("draft") %></i> 
