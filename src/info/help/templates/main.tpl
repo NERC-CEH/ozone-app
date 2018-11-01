@@ -36,7 +36,7 @@
       <%= t("Sensitive records") %>
     </a>
     <p id="c25" class="collapse" aria-labelledby="heading One" aria-expanded="false">
-      <%= t("In some cases, an app user may not want to give the exact location of where ozone injury has been seen. When filling in your record of ozone injury, it is possible to mask the location by clicking on the Sensitive button on the Location page of the recording form. The record is submitted accurately but treated in confidence. Any listing of records that is publicly visible will truncate coordinates of those marked sensitive e.g. 47.42213N 2.17174E becomes 47.42N 2.17E. (For UK records, coordinates are converted to Ordnance Survey grid references and sensitive records are reduced to 10km resolution.) When showning records on maps, sensitive records will be displayed with this reduced precision.") %>
+      <%= t("In some cases, an app user may not want to give the exact location of where ozone injury has been seen. When filling in your record of ozone injury, it is possible to mask the location by clicking on the Sensitive button on the Location page of the recording form. The record is submitted accurately but treated in confidence. Any listing of records that is publicly visible will truncate coordinates of those marked sensitive e.g. 47.42213N 2.17174E becomes 47.42N 2.17E. (For UK records, coordinates are converted to Ordnance Survey grid references and sensitive records are reduced to 10km resolution.) When showing records on maps, sensitive records will be displayed with this reduced precision.") %>
     </p>
   </li>
   <li class="table-view-cell">
