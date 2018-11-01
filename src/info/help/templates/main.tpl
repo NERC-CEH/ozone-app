@@ -31,12 +31,22 @@
   </li>
   <li class="table-view-cell">
     <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
+       href="#c25" aria-expanded="false" aria-controls="c25">
+      <span class="icon icon-collapse pull-left"></span>
+      <%= t("Sensitive records") %>
+    </a>
+    <p id="c25" class="collapse" aria-labelledby="heading One" aria-expanded="false">
+      <%= t("In some cases, an app user may not want to give the exact location of where ozone injury has been seen. When filling in your record of ozone injury, it is possible to mask the location by clicking on the Sensitive button on the Location page of the recording form. The record is submitted accurately but treated in confidence. Any listing of records that is publicly visible will truncate coordinates of those marked sensitive e.g. 47.42213N 2.17174E becomes 47.42N 2.17E. (For UK records, coordinates are converted to Ordnance Survey grid references and sensitive records are reduced to 10km resolution.) When showing records on maps, sensitive records will be displayed with this reduced precision.") %>
+    </p>
+  </li>
+  <li class="table-view-cell">
+    <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
        href="#c3" aria-expanded="false" aria-controls="c3">
       <span class="icon icon-collapse pull-left"></span>
       <%= t("Sync. with the database") %>
     </a>
     <p id="c3" class="collapse" aria-labelledby="headingTwo" aria-expanded="false">
-      <%= t("All your saved records will be shown on the home page. By default a record is in") %> 
+      <%= t("t is possible to complete a record while offline. If you try to send a record while offline, you will receive a message. If you click OK, the completed record will appear in your Record List on the home page. By default a record is in") %> 
       <i><%= t("draft") %></i> 
       <%= t("mode until it is set for submission. While it is in") %> 
       <i><%= t("draft") %></i> 
