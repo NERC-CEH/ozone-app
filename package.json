@@ -3,7 +3,7 @@
   "id": "uk.ac.ceh.oza",
   "title": "Ozone App",
   "description": "ICP Vegetation ozone damage mobile application.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "build": "1",
   "homepage": "https://icpvegetation.ceh.ac.uk",
   "scripts": {

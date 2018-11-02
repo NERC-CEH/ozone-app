@@ -9,7 +9,7 @@
   </li>
   <li class="table-view-cell">
     <span class="media-object pull-left icon icon-location"></span>
-    <span class="media-object pull-right descript"><%- obj.coords %></span>
+    <span class="media-object pull-right descript"><%- obj.location %></span>
     <%= t("Location") %>
   </li>
   <% if (obj.country) { %>
