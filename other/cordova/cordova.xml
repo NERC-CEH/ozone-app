@@ -137,6 +137,8 @@
         <custom-preference name="android-manifest/application/@android:roundIcon" value="@mipmap/ic_launcher_round" />
 
 
+        <resource-file src="../../config/cordova/images/android/icon/drawable/ic_launcher_background.png" target="res/drawable/ic_launcher_background.png" />
+        <resource-file src="../../config/cordova/images/android/icon/drawable-v24/ic_launcher_foreground.png" target="res/drawable-v24/ic_launcher_foreground.png" />
         <resource-file src="../../other/cordova/images/android/icon/mipmap-anydpi-v26/ic_launcher.xml" target="res/mipmap-anydpi-v26/ic_launcher.xml" />
         <resource-file src="../../other/cordova/images/android/icon/mipmap-anydpi-v26/ic_launcher_round.xml" target="res/mipmap-anydpi-v26/ic_launcher_round.xml" />
         <resource-file src="../../other/cordova/images/android/icon/mipmap-hdpi/ic_launcher.png" target="res/mipmap-hdpi/ic_launcher.png" />
