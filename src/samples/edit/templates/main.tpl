@@ -29,7 +29,7 @@
     <a href="#samples/<%- obj.id %>/edit/injury" id="injury-button" 
       class="navigate-right">
       <span class="media-object pull-left icon icon-bandage"></span>
-      <span class="badge <%= obj.injuryStatus %>"><%= obj.injuryAnswers %>/7</span>
+      <span class="badge <%= obj.injuryStatus %>"><%= obj.injuryAnswers %>/6</span>
       <%= t("Injury") %>
     </a>
   </li>

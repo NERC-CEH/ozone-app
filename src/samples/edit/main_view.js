@@ -87,8 +87,7 @@ export default Marionette.View.extend({
     injuryAnswers += occ.get('injury-side') ? 1 : 0;
     injuryAnswers += occ.get('injury-age') ? 1 : 0;
     injuryAnswers += occ.get('injury-extent') ? 1 : 0;
-    injuryAnswers += occ.get('injury-evidence') ? 1 : 0;
-    let injuryStatus = (injuryAnswers == 7) ? 'ok' : 'warn';
+    let injuryStatus = (injuryAnswers == 6) ? 'ok' : 'warn';
     let weatherAnswers = 0;
     weatherAnswers += sample.get('weather-temp') ? 1 : 0;
     weatherAnswers += sample.get('weather-rain') ? 1 : 0;
