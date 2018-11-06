@@ -39,7 +39,7 @@
       </div>
       <div class="swap fifth">
         <div class="message">
-          <h2>Lets start!</h2>
+          <h2>Let's start!</h2>
           <p>
             All that’s left to do is to click on the
             <b style="white-space: nowrap;">Get Started</b> button below.
