@@ -90,6 +90,7 @@ export default Marionette.View.extend({
         attrView = new CheckboxInputView({
           config: attrConfig,
           default: currentVal,
+          done: true
         });
         break;
 
@@ -97,6 +98,7 @@ export default Marionette.View.extend({
         attrView = new TextareaView({
           config: attrConfig,
           default: currentVal,
+          done: true
         });
         break;
 

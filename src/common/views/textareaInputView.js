@@ -10,12 +10,17 @@ import Device from 'helpers/device';
 export default Marionette.View.extend({
   template: JST['common/textarea'],
 
+  triggers: {
+    'click button[data-rel="back"]': 'save'
+  },
+
   initialize() {
     const config = this.options.config || {};
 
     this.model = new Backbone.Model({
       value: this.options.default || config.default,
       message: this.options.info || config.info,
+      done: this.options.done || config.done,
     });
   },
 

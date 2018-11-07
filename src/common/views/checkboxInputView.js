@@ -9,6 +9,10 @@ import JST from 'JST';
 export default Marionette.View.extend({
   template: JST['common/checkbox'],
 
+  triggers: {
+    'click button[data-rel="back"]': 'save'
+  },
+
   initialize() {
     const config = this.options.config || {};
 
@@ -24,6 +28,7 @@ export default Marionette.View.extend({
       message: this.options.info || config.info,
       selection,
       selected: this.options.default || config.default,
+      done: this.options.done || config.done
     });
   },
 
