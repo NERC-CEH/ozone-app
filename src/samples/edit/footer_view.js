@@ -37,7 +37,7 @@ const SavedImageView = Marionette.View.extend({
 
 const EmptyView = Marionette.View.extend({
   template: JST['samples/edit/image_picker_empty'],
-  tagName: 'span',
+  tagName: 'div',
   className: 'empty',
 });
 
