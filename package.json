@@ -4,7 +4,7 @@
   "title": "Ozone App",
   "description": "ICP Vegetation ozone damage mobile application.",
   "version": "1.0.5",
-  "build": "1",
+  "build": "2",
   "homepage": "https://icpvegetation.ceh.ac.uk",
   "scripts": {
     "build": "grunt",
