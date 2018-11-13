@@ -96,6 +96,7 @@ npm run build:cordova:update
 ```bash
 npm run build:cordova:android
 ```
+This will create the file main.apk in the folder dist/cordova/dist which you can upload to google play.
 
 - **iOS build** open `dist/cordova/platforms/ios/iRecord App.xcodeproj` in XCode
 
